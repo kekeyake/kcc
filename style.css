@@ -1,0 +1,69 @@
+#stepSlick .swiper-slide {
+        width: 234px;
+        height: 265px;
+        opacity: .5;
+    }
+    #stepSlick .swiper-slide-active {
+        /* transform: scaleX(2) scaleY(1.1); */
+        width:708px;
+        height:361px;
+        opacity: 1;
+    }
+    #abSlick .slick-slide {
+        transform:scale(0.7);
+        filter: grayscale(1);
+    }
+    #abSlick .slick-center {
+        transform:scale(1);
+        filter: grayscale(0);
+    }
+    #abSlick .slick-dots {
+        position: absolute;
+        bottom: -25px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+    #abSlick .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+    #abSlick .slick-dots button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+    }
+    #abSlick .slick-dots button:before {
+        font-family: 'slick';
+        font-size: 6px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        color: #686868;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    #abSlick .slick-dots li.slick-active button:before {
+        color: #aaa;
+    }

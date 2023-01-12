@@ -1,3 +1,9 @@
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+    integrity="sha512-nSomje7hTV0g6A5X/lEZq8koYb5XZtrWD7GU2+aIJD35CePx89oxSM+S7k3hqNSpHajFbtmrjavZFxSEfl6pQA=="
+    referrerpolicy="no-referrer" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"
+    integrity="sha512-ZHauUc/vByS6JUz/Hl1o8s2kd4QJVLAbkz8clgjtbKUJT+AG1c735aMtVLJftKQYo+LD62QryvoNa+uqy+rCHQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <style type="text/css">
     @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
@@ -81,166 +87,213 @@
     #eventContainer #sect02 {
         width: 100%;
         height: 3056px;
+        padding-top:250px;
         overflow: visible;
         background: url("https://i.imgur.com/3GoFoKS.png") no-repeat top center;
     }
 
-    #eventContainer #sect02 .c_btn {
+    #sect02 .stepWrap {
+        margin: 0 auto 178px;
+        width: 1650px;
+        height:264px;
+        overflow: hidden;
+    }
+     #sect02 .bannerWrap {
+        width: 100%;
+        height:433px;
+        position:relative;
+    }
+    #sect02 .abrWrap {
+        width:100%;
+        margin-top:326px;
+        position:relative;
+    }
+    #sect02 .sprWrap {
+        width:100%;
+        margin-top:415px;
+        position:relative;
+    }
+    #bannerSlick .slick-arrow {
+        position:absolute;
+        top:195px;
+        width:42px;
+        height:42px;
+        font-size:0;
+        z-index:1;
+    }
+    #bannerSlick .slick-prev {
+        left:290px;
+        background:url(https://i.imgur.com/COZUcpI.png) no-repeat 0 0 / cover;
+    }
+    #bannerSlick .slick-next {
+        right:290px;
+        background:url(https://i.imgur.com/XUR9QsY.png) no-repeat 0 0 / cover;
+    }
+    #stepSlick .swiper-wrapper {
+        align-items: center;
+    }
+
+    #stepSlick .swiper-slide {
+        width: 234px;
+        height: 265px;
+        opacity: .5;
+    }
+    #stepSlick .swiper-slide-active {
+        /* transform: scaleX(2) scaleY(1.1); */
+        width:708px;
+        height:361px;
+        opacity: 1;
+    }
+    #abSlick .slick-slide {
+        transform:scale(0.7);
+        filter: grayscale(1);
+        opacity:.8;
+        margin:0 -100px;
+    }
+    #abSlick .slick-center {
+        transform:scale(1);
+        filter: grayscale(0);
+        opacity:1;
+        z-index:1;
+        position:relative;
+    }
+    #abSlick .slick-dots {
         position: absolute;
-        top: 560px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 182.82px;
-        height: 37.78px;
-        line-height: 37.78px;
-        border-radius: 5px;
-        background: #222;
-        cursor: pointer;
-        text-align: center;
-        color: #fff;
-        letter-spacing: -0.035em;
-        font-size: 20px;
-        font-weight: 500;
-    }
-
-    #eventContainer #sect02 .c_btn:hover {
-        background: #f38f72;
-        color: #fff;
-    }
-
-    #eventContainer #sect02 .c_btn img.pointer {
-        position: absolute;
-        top: 15px;
-        left: 163px;
-        width: 36px;
-        height: 38px;
-    }
-
-    #eventContainer #sect02 ul {
-        position: relative;
-        top: 700px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1200px;
-        height: 234px;
-    }
-
-    #eventContainer #sect02 ul>li {
-        float: left;
-        position: relative;
-        width: 192px;
-        height: 234px;
-        margin-right: 8px;
-    }
-
-    #eventContainer #sect02 ul>li:last-child {
-        margin-right: 0;
-    }
-
-    #eventContainer #sect02 ul>li .scr {
-        position: absolute;
-        bottom: 2px;
-        left: 0;
-        width: 192px;
-        height: 75px;
-        box-sizing: border-box;
-        border: 2px solid #000;
-        border-radius: 0 0 10px 10px;
-        background: #fff;
-        cursor: pointer;
-    }
-
-    #eventContainer #sect02 ul>li .scr:hover {
-        background: #f5e5cc;
-    }
-
-    #eventContainer #sect02 ul>li .scr a {
-        z-index: 1;
+        bottom: -35px;
         display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+    #abSlick .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+    #abSlick .slick-dots button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+    }
+    #abSlick .slick-dots button:before {
+        font-family: 'slick';
+        font-size: 45px;
+        line-height: 20px;
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 0;
-        transform: translateY(-50%);
-        width: 192px;
-        height: 75px;
-        line-height: 75px;
-        font-family: 'Cafe24Ohsquare';
-        color: #333;
-        font-size: 28px;
-        letter-spacing: -0.04em;
-        padding-left: 20px;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        color: #686868;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    #abSlick .slick-dots li.slick-active button:before {
+        color: #aaa;
+    }
+    #abSlick .slick-arrow {
+        position:absolute;
+        top:165px;
+        width:42px;
+        height:42px;
+        font-size:0;
+        z-index:1;
+    }
+    #abSlick .slick-prev {
+        left:295px;
+        background:url(https://i.imgur.com/j1jK77t.png) no-repeat 0 0 / cover;
+    }
+    #abSlick .slick-next {
+        right:295px;
+        background:url(https://i.imgur.com/rNUURqG.png) no-repeat 0 0 / cover;
     }
 
-    #eventContainer #sect02 ul>li:hover .scr a {
-        color: #222;
-    }
-
-    #eventContainer #sect02 ul>li .scr .circle {
+    #spSlick .slick-dots {
         position: absolute;
-        top: 50%;
-        right: 15px;
-        transform: translateY(-50%);
-        width: 31.42px;
-        height: 31.42px;
-        border-radius: 50%;
-        background: #aaa;
-        pointer-events: none;
+        bottom: -35px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
     }
-
-    #eventContainer #sect02 ul>li .scr:hover .circle {
-        background: #222;
+    #spSlick .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
     }
-
-    #eventContainer #sect02 ul>li .scr .circle .bar1 {
+    #spSlick .slick-dots button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+    }
+    #spSlick .slick-dots button:before {
+        font-family: 'slick';
+        font-size: 45px;
+        line-height: 20px;
         position: absolute;
-        top: 32%;
-        left: 11px;
-        transform-origin: center;
-        transform: rotateZ(45deg);
-        width: 12px;
-        height: 3px;
-        background: #fff;
-        border-radius: 5px;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        color: #686868;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
-
-    #eventContainer #sect02 ul>li .scr .circle .bar2 {
-        position: absolute;
-        top: 58%;
-        left: 11px;
-        transform-origin: center;
-        transform: rotateZ(-45deg);
-        width: 12px;
-        height: 3px;
-        background: #fff;
-        border-radius: 5px;
+    #spSlick .slick-dots li.slick-active button:before {
+        color: #aaa;
     }
-
-    #eventContainer #sect02 ul>li .scr:hover .circle .bar1 {
-        background: #f5e5cc;
+    #spSlick .slick-arrow {
+        position:absolute;
+        top:165px;
+        width:42px;
+        height:42px;
+        font-size:0;
+        z-index:1;
     }
-
-    #eventContainer #sect02 ul>li .scr:hover .circle .bar2 {
-        background: #f5e5cc;
+    #spSlick .slick-prev {
+        left:295px;
+        background:url(https://i.imgur.com/j1jK77t.png) no-repeat 0 0 / cover;
     }
-
-    #eventContainer #sect02 img.person {
-        z-index: 1;
-        position: absolute;
-        top: 1343px;
-        left: 1470px;
-        width: 366px;
-        height: 493PX;
+    #spSlick .slick-next {
+        right:295px;
+        background:url(https://i.imgur.com/rNUURqG.png) no-repeat 0 0 / cover;
     }
-
-    #eventContainer #sect02 iframe {
-        z-index: 1;
-        position: absolute;
-        top: 1046px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 960px;
-        height: 540px;
+    #spSlick swiper-slide {
+        margin:0 30px;
     }
+    
 
     /* sect03 */
     #eventContainer #sect03 {
@@ -1462,11 +1515,34 @@
 
     <section id="sect02">
         <div class="stepWrap" id="stepSlick">
-            <div><img src="https://i.imgur.com/MvZThGQ.png" alt=""></div>
-            <div><img src="https://i.imgur.com/dQUfEee.png" alt=""></div>
-            <div><img src="https://i.imgur.com/eIW8goF.png" alt=""></div>
-            <div><img src="https://i.imgur.com/ZeKz0aE.png" alt=""></div>
-            <div><img src="https://i.imgur.com/zud1eTK.png" alt=""></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://i.imgur.com/MvZThGQ.png" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.imgur.com/dQUfEee.png" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.imgur.com/eIW8goF.png" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.imgur.com/ZeKz0aE.png" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.imgur.com/zud1eTK.png" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="bannerWrap" id="bannerSlick">
+            <div class=""><img src="https://i.imgur.com/n53KGkX.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/2CvkLiR.png" alt=""></div>
+        </div>
+
+        <div class="abrWrap" id="abSlick">
+            <div class=""><img src="https://i.imgur.com/kTm9CRC.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/DrPOXfZ.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/Ucfu26M.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/Q5vhBoY.png" alt=""></div>
+        </div>
+
+        <div class="spWrap" id="spSlick">
+            <div class=""><img src="https://i.imgur.com/HPTIzY8.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/TSreEQK.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/Jxs1MLq.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/P7QqBX0.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/Q4MKjuT.png" alt=""></div>
         </div>
     </section>
 
@@ -2160,14 +2236,57 @@
         $("#sect04 .box ul.ppp>li").eq(5).addClass("active");
     });
 
-    $("#stepSlick").slick({
-        centerMode: true,
-        infinite: true,
-        slidesToShow: 5,
-        speed: 500,
-        arrows: true,
+    var swiper = new Swiper("#stepSlick", {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        autoHeight: true,
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        //     pauseOnMouseEnter: true,
+        // },
+        observer: true,	// 추가
+        observeParents: true,	// 추가
+        navigation: {
+            nextEl: "#stepSlick .swiper-button-next",
+            prevEl: "#stepSlick .swiper-button-prev",
+        },
+        on: {
+            slideChange: function () {
+                //이벤트 또는 조건문으로 이용하면 된다.
+            },
+        },
     });
 
+    $('#bannerSlick').slick({
+        infinite: true,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+    });
+    $('#abSlick').slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true
+    });
+    $('#spSlick').slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        slidesToShow: 3,
+        centerMode: true,
+    });
+    
+    
     /* 1 */
     $('#sect04 .box ul.ppp>li#p1 .vbox .vbox_slick').slick({
         infinite: true,
