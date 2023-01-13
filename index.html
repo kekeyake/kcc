@@ -24,7 +24,20 @@
         font-weight: normal;
         font-style: normal
     }
+    @font-face {
+        font-family: 'SEBANG';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'SEBANG';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
 
+    .sb {font-family: 'SEBANG';}
     #eventContainer {
         width: 100%;
         margin: 0 auto;
@@ -50,6 +63,7 @@
         text-decoration: none
     }
 
+
     #eventContainer section {
         width: 100%;
         position: relative;
@@ -67,35 +81,58 @@
     }
 
     /* sect01 */
-    #eventContainer #sect01 {
+    #sect01 {
         width: 100%;
-        height: 2220px;
-        background: url("https://i.imgur.com/AKRVDZ0.png") no-repeat top center;
+        height: 2675px;
+        background: url("https://i.imgur.com/sTGuU2c.png") no-repeat top center;
     }
 
-    #eventContainer #sect01 iframe {
+    #sect01 iframe {
         z-index: 1;
         position: absolute;
         top: 1425px;
         left: 50%;
         transform: translateX(-50%);
-        width: 1200px;
-        height: 676px;
+        width: 1201px;
+        height: 677px;
+    }
+    #sect01 .btn1 {
+        position: absolute;
+        bottom:90px;
+        left: 50%;
+        margin-left: -280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 254px;
+        height: 66px;
+        border-radius: 32px;
+        background-color: #333;
+         -webkit-animation: btnBlink 500ms linear infinite;
+        animation: btnBlink 500ms linear infinite;
+        cursor: pointer;
+    }
+    #sect01 .btn1:hover {
+         animation: none;
+        background: #e27626;
+    }
+    #sect01 .btn1 img {
+        width: auto;
     }
 
     /* sect02 */
-    #eventContainer #sect02 {
+    #sect02 {
         width: 100%;
-        height: 3056px;
-        padding-top:250px;
+        height: 3057px;
+        padding-top:230px;
         overflow: visible;
-        background: url("https://i.imgur.com/3GoFoKS.png") no-repeat top center;
+        background: url("https://i.imgur.com/82Bcr05.png") no-repeat top center;
     }
 
     #sect02 .stepWrap {
-        margin: 0 auto 178px;
-        width: 1650px;
-        height:264px;
+        margin: 0 auto 157px;
+        width: 1648px;
+        height:305px;
         overflow: hidden;
     }
      #sect02 .bannerWrap {
@@ -103,15 +140,44 @@
         height:433px;
         position:relative;
     }
+    #sect02 .bannerWrap .banner1 {
+        cursor: pointer;
+        width: 100%;
+        height:433px;
+        background: url(https://i.imgur.com/n53KGkX.png) no-repeat 50% 50%;
+    }
+    #sect02 .bannerWrap .banner2 {
+        cursor: pointer;
+        height:433px;
+        width: 100%;
+        background: url(https://i.imgur.com/2CvkLiR.png) no-repeat 50% 50%;
+    }
     #sect02 .abrWrap {
         width:100%;
         margin-top:326px;
         position:relative;
     }
-    #sect02 .sprWrap {
+    #sect02 .spWrap {
         width:100%;
         margin-top:415px;
         position:relative;
+    }
+    #stepSlick .slick-arrow {
+        position:absolute;
+        top:100px;
+        width:42px;
+        height:42px;
+        font-size:0;
+        z-index:1;
+        left: 50%;
+    }
+    #stepSlick .slick-prev {
+        transform: translateX(-295px);
+        background:url(https://i.imgur.com/LNx4GJh.png) no-repeat 50% 50%;
+    }
+    #stepSlick .slick-next {
+        transform: translateX(255px);
+        background:url(https://i.imgur.com/TNOZklT.png) no-repeat 50% 50%;
     }
     #bannerSlick .slick-arrow {
         position:absolute;
@@ -122,28 +188,14 @@
         z-index:1;
     }
     #bannerSlick .slick-prev {
-        left:290px;
+        left: 15%;
         background:url(https://i.imgur.com/COZUcpI.png) no-repeat 0 0 / cover;
     }
     #bannerSlick .slick-next {
-        right:290px;
+        right: 15%;
         background:url(https://i.imgur.com/XUR9QsY.png) no-repeat 0 0 / cover;
     }
-    #stepSlick .swiper-wrapper {
-        align-items: center;
-    }
-
-    #stepSlick .swiper-slide {
-        width: 234px;
-        height: 265px;
-        opacity: .5;
-    }
-    #stepSlick .swiper-slide-active {
-        /* transform: scaleX(2) scaleY(1.1); */
-        width:708px;
-        height:361px;
-        opacity: 1;
-    }
+   
     #abSlick .slick-slide {
         transform:scale(0.7);
         filter: grayscale(1);
@@ -226,7 +278,7 @@
 
     #spSlick .slick-dots {
         position: absolute;
-        bottom: -35px;
+        bottom: 280px;
         display: block;
         width: 100%;
         padding: 0;
@@ -259,7 +311,7 @@
     #spSlick .slick-dots button:before {
         font-family: 'slick';
         font-size: 45px;
-        line-height: 20px;
+        line-height: 45px;
         position: absolute;
         top: 0;
         left: 0;
@@ -267,565 +319,249 @@
         height: 20px;
         content: '•';
         text-align: center;
-        color: #686868;
+        color: #d3d4d6;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
     #spSlick .slick-dots li.slick-active button:before {
-        color: #aaa;
+        color: #ec525e;
     }
     #spSlick .slick-arrow {
         position:absolute;
-        top:165px;
+        top:145px;
         width:42px;
         height:42px;
         font-size:0;
         z-index:1;
+        left: 50%;
+        opacity: .9;
     }
     #spSlick .slick-prev {
-        left:295px;
+        transform: translateX(-210px);
         background:url(https://i.imgur.com/j1jK77t.png) no-repeat 0 0 / cover;
     }
     #spSlick .slick-next {
-        right:295px;
+        transform: translateX(170px);
         background:url(https://i.imgur.com/rNUURqG.png) no-repeat 0 0 / cover;
     }
-    #spSlick swiper-slide {
+    #spSlick .slick-slide {
         margin:0 30px;
+        width: 469px;
+        height: 592px;
     }
-    
-
-    /* sect03 */
-    #eventContainer #sect03 {
+        /* sect03 */
+    #sect03 {
         height: 0;
     }
 
-    #eventContainer #sect03 .list {
-        padding-top: 385px;
-        width: 960px;
-        margin: 0 auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    #eventContainer #sect03 .list li {
-        position: relative;
-    }
-
-    #eventContainer #sect03 .list li .on {
-        visibility: hidden;
-    }
-
-    #eventContainer #sect03 .list li:hover .on {
-        visibility: visible;
-    }
-
-    #eventContainer #sect03 .list li .off {
-        width: 91.303%;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-
-    #eventContainer #sect03 .list li:hover .off {
-        visibility: hidden;
-    }
-
-    #eventContainer #sect03 .btn1 {
-        position: absolute;
-        top: 930px;
-        left: 163px;
-        width: 220px;
-        height: 49px;
-        border-radius: 24.5px;
-        cursor: pointer;
-        background: #333;
-        -webkit-animation: btnBlink 500ms linear infinite;
-        animation: btnBlink 500ms linear infinite;
-    }
-
-    @-webkit-keyframes btnBlink {
-        0% {
-            background: #222;
-        }
-
-        49% {
-            background: #222;
-        }
-
-        50% {
-            background: #e27626;
-        }
-
-        100% {
-            background: #e27626;
-        }
-    }
-
-    @keyframes btnBlink {
-        0% {
-            background: #222;
-        }
-
-        49% {
-            background: #222;
-        }
-
-        50% {
-            background: #e27626;
-        }
-
-        100% {
-            background: #e27626;
-        }
-    }
-
-    #eventContainer #sect03 .btn1 img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 152px;
-        height: 23px;
-    }
-
-    #eventContainer #sect03 .btn1:hover {
-        animation: none;
-        background: #e27626;
-    }
-
-    #eventContainer #sect03 .btn2 {
-        position: absolute;
-        top: 930px;
-        left: 795px;
-        width: 220px;
-        height: 49px;
-        border-radius: 24.5px;
-        cursor: pointer;
-        background: #333;
-    }
-
-    #eventContainer #sect03 .btn2 img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 112px;
-        height: 23px;
-    }
-
-    #eventContainer #sect03 .btn2:hover {
-        background: #f8815f;
-    }
-
     /* sect04 */
-    #eventContainer #sect04 {
+    #sect04 {
         width: 100%;
         height: 2562px;
+        padding-top: 250px;
         background: url("https://i.imgur.com/PeNgda7.png") no-repeat top center;
     }
+    
+    #sect04 .tab-list {
+        width: 1200px;
+        height: 77px;
+        margin:0 auto;
+        background: url();
+        display: flex;
+        border: 2px solid #000;
+        border-bottom: 0 solid #000;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        overflow: hidden;
+    }
 
-    #eventContainer #sect04 .btn1 {
+    #sect04 .tab-list a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        background-color: #ffc831;
+        font-size: 32px;
+        color:#333;
+        font-family: 'SEBANG';
+        font-weight: 400;
+        border-left: 2px solid #000;
+        border-bottom: 2px solid #000;
+    }
+    #sect04 .tab-list a:nth-child(odd) {
+        background-color: #f5bd22;
+    }
+    #sect04 .tab-list a.active {
+        background-color: #fffaed;
+        font-size: 28pt;
+        color:#333;
+        font-weight: 700;
+        border-bottom: 2px solid #fffaed;
+        position: relative;
+    }    
+    #sect04 .tab-list a.active:nth-child(n + 4) {
+        background-color: #fff7e1;
+        border-bottom: 2px solid #fff7e1;
+    }    
+    #sect04 .tab-list a:first-child {
+        width: 202px;
+        border-left: 0 solid #000;
+    }    
+    #sect04 .tab-list a:last-child {
+        width: 202px;
+    }
+    #sect04 .tab-list a span {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        font-family: inherit;
+    }
+    #sect04 .tab-list a.active span::before {
+        content: '';
+        border-bottom:20px solid #ffe18f;
+        display: block;
+        z-index: 0;
         position: absolute;
-        bottom:125px;
+        width: 120%;
         left: 50%;
-        margin-left: -280px;
+        transform: translate(-50%, 10px);
+        z-index: -1;
+    }
+    #sect04 .tab-container {
+        width: 1200px;
+        height: 650px;
+        margin:0 auto;
+        overflow: hidden;
+    }
+    #sect04 .tab-cont {
+        width: 1200px;
+        height: 650px;
+        margin:0 auto;
+        display: flex;
+        border: 2px solid #000;
+        border-top: 0 solid #000;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        overflow: hidden;
+        background-color: #fffaed;
+        position: absolute;
+        left: 0;
+        top:0;
+        display: flex;
+        opacity: 1;
+    }
+    #sect04 .tab-cont:not(:first-child) {
+        opacity: 0;
+    }
+    #sect04 .tab-cont:nth-child(-n+3)::before {
+        content: '';
+        background-color: #fff7e1;
+        width: 50%;
+        position: absolute;
+        top:0;
+        right: 0;
+        height: 650px;
+
+    }
+    #sect04 .boxWrap {
+        position: absolute;
+        width: 100%;
+        bottom: 610px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 254px;
-        height: 66px;
-        border-radius: 32px;
-        background-color: #333;
-         -webkit-animation: btnBlink 500ms linear infinite;
-        animation: btnBlink 500ms linear infinite;
-        cursor: pointer;
+        gap: 30px;
     }
-    #eventContainer #sect04 .btn1:hover {
-         animation: none;
-        background: #e27626;
+    #sect04 .row {
+        padding:55px 86px 0;
+         position: relative;
+         z-index: 1;
+         text-align: center;
+         width: 50%;
     }
-    #eventContainer #sect04 .btn1 img {
-        width: auto;
-    }
-    #eventContainer #sect04 .box {
-        position: relative;
-        top: 3443px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1200px;
-        height: 698px;
-        border-radius: 20px;
-        background: url("https://i.imgur.com/RplQX2x.png") no-repeat top center/cover;
+    #sect04 .row-one {
+        padding:90px 86px 0;
+         position: relative;
+         z-index: 1;
+         text-align: center;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
     }
 
-    #eventContainer #sect04 .box ul.tab {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 70px;
-    }
+    #sect04 .tab-cont .slick-arrow {position: absolute;width: 47px;height: 47px;cursor: pointer;font-size: 0;color:transparent;z-index: 1;}
+    #sect04 .tab-cont .slick-prev {left: 0;background: url(https://i.imgur.com/qGJa6TM.png) no-repeat 0 0;}
+    #sect04 .tab-cont .slick-next {right: 0;background: url(https://i.imgur.com/EoooWqg.png) no-repeat 0 0;}
+    #sect04 .tab-cont .slick-dots {display: flex;position: absolute;width: max-content;gap: 10px;left: 50%;transform: translateX(-50%);}
+    #sect04 .tab-cont .slick-dots button {font-size: 11pt;display: flex;justify-content: center;align-items: center;width: 20px;height: 20px;border-radius: 50%;background: #dfdfdf;font-family: roboto;}
+    #sect04 .tab-cont .slick-active button {background-color: #e4be9b;}
 
-    #eventContainer #sect04 .box ul.tab>li {
-        float: left;
-        position: relative;
-        cursor: pointer;
-    }
 
-    #eventContainer #sect04 .box ul.tab>li:hover {
-        background: rgba(133, 133, 133, 0.3);
-    }
+    #sect04 .row .t1 {font-size: 38px;font-weight: 700;margin-bottom: 10px;}
+    #sect04 .row .t2 {font-size: 24px;margin-bottom: 30px;}
+    #sect04 .row .img-slide {margin:0 auto 20px;width: 428px;height: 264px;}
+    #sect04 .row .txt-slide {width: 428px;position: relative;padding-bottom: 60px;}
+    #sect04 .row .txt-slide .s1 {font-size: 28px;margin-bottom: 10px;}
+    #sect04 .row .txt-slide .s2 {font-size: 34px;font-weight: 700;}
+    #sect04 .row .txt-slide .slick-arrow {bottom:0;}
+    #sect04 .row .txt-slide .slick-dots {bottom: 20px;}
 
-    #eventContainer #sect04 .box ul.tab>li:nth-child(1) {
-        left: 0.5px;
-        width: 398px;
-        height: 70px;
-        /*            background:url("https://i.imgur.com/Hhc56XQ.png") no-repeat top center;*/
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662bhT532052697.png") no-repeat top center;
-    }
+    #sect04 .row-one .img-slide {width: 514px;height: 456px;overflow: hidden;}
+    #sect04 .row-one .txt-slide {width: 428px;padding-top: 20px;}
+    #sect04 .row-one .txt-slide .s1 {font-size: 26px;color:#7c7259;margin-bottom: 10px;font-weight: 500;opacity: .7;}
+    #sect04 .row-one .txt-slide .s2 {font-size: 42px;margin-bottom: 260px;font-weight: 700;} 
+    #sect04 .row-one .txt-slide .slick-arrow {bottom:230px;}
+    #sect04 .row-one .txt-slide .slick-dots {bottom: 245px;}
+    #sect04 .row-one .txt-slide .btnConsulting {display: flex;justify-content: center;align-items: center;width: 100%;border-radius: 30px;height: 60px;background-color: #3d3d3d;}
+    #sect04 .row-one .txt-slide .btnConsulting:hover {background-color: #e4be9b;}
+    #sect04 .row-one .txt-slide .btnConsulting span {font-size: 24px;font-weight: 700;color:#fff;display: flex;align-items: center;}
+    #sect04 .row-one .txt-slide .btnConsulting span::after {content: '';display: block;width: 0;height: 0;border: 8px solid transparent;border-left-color:#fff;margin-left: 20px;border-radius: 5px;}
+    #sect04 .row-one .txt-list {position: absolute;top: 250px;width: 600px;right:0;display: flex;justify-content: center;}
+    #sect04 .row-one .txt-list li {font-size: 26px;line-height: 28pt;text-align: center;padding:0 30px;font-weight: 500;}
+    #sect04 .row-one .txt-list li:not(:first-child) {border-left: 1px solid #aaa;}
+    
 
-    #eventContainer #sect04 .box ul.tab>li:nth-child(2) {
-        left: 0.5px;
-        width: 300px;
-        height: 70px;
-        background: url("https://i.imgur.com/wDCIzfU.png") no-repeat top center;
-    }
 
-    #eventContainer #sect04 .box ul.tab>li:nth-child(3) {
-        width: 403px;
-        height: 70px;
-        /*            background:url("https://i.imgur.com/4CAoJAj.png") no-repeat top center;*/
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662LRk532065854.png") no-repeat top center;
-    }
 
-    #eventContainer #sect04 .box ul.tab>li:nth-child(4) {
-        left: 0.5px;
-        width: 399px;
-        height: 70px;
-        /*            background:url("https://i.imgur.com/Ba1rPyI.png") no-repeat top center;*/
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662Hgq532076763.png") no-repeat top center;
+    #sect04 .boxWrap li {
+        width:371px;
+        height: 483px;
     }
-
-    #eventContainer #sect04 .box ul.tab>li:nth-child(1).active {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662oCt532060562.png") no-repeat top center;
+    #sect04 .boxWrap li:hover {
+        cursor: pointer;        
     }
-
-    #eventContainer #sect04 .box ul.tab>li:nth-child(2).active {
-        background: url("https://i.imgur.com/zNINH2M.png") no-repeat top center;
+    #sect04 .boxWrap__01 {
+        background: url(https://i.imgur.com/HBDV7SX.png) no-repeat 50% 50% / contain;
     }
-
-    #eventContainer #sect04 .box ul.tab>li:nth-child(3).active {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662Mxt532071901.png") no-repeat top center;
+    #sect04 .boxWrap__01:hover {
+        background: url(https://i.imgur.com/lmQJgKX.png) no-repeat 50% 50% / contain;
     }
-
-    #eventContainer #sect04 .box ul.tab>li:nth-child(4).active {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662dYX532084400.png") no-repeat top center;
-        background: none;
+    #sect04 .boxWrap__02 {
+        background: url(https://i.imgur.com/zmaPJ4C.png) no-repeat 50% 50% / contain;
     }
-
-    #eventContainer #sect04 .box ul.tab>li p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: 'Cafe24Ohsquare';
-        font-size: 26px;
-        letter-spacing: -0.025em;
-        color: #999;
+    #sect04 .boxWrap__02:hover {
+        background: url(https://i.imgur.com/iypEKSZ.png) no-repeat 50% 50% / contain;
     }
-
-    #eventContainer #sect04 .box ul.tab>li.active p {
-        font-family: 'Cafe24Ohsquare';
-        font-size: 36px;
-        letter-spacing: -0.025em;
-        color: #222;
+    #sect04 .boxWrap__03 {
+        background: url(https://i.imgur.com/wHFoxo6.png) no-repeat 50% 50% / contain;
     }
-
-    #eventContainer #sect04 .box ul.ppp {
-        position: relative;
-        width: 100%;
+    #sect04 .boxWrap__03:hover {
+        background: url(https://i.imgur.com/FCPRXwW.png) no-repeat 50% 50% / contain;
     }
-
-    #eventContainer #sect04 .box ul.ppp>li {
-        display: none;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li.active {
-        display: block;
-    }
-
-    /* tit */
-    #eventContainer #sect04 .box ul.ppp>li p.tit {
-        z-index: 1;
-        position: absolute;
-        top: 23px;
-        left: 105px;
-        width: 100%;
-        color: #222;
-        font-size: 22px;
-        letter-spacing: 0.02em;
-        font-weight: 600;
-    }
-
-    /* cursor */
-    #eventContainer #sect04 .box ul.ppp>li img.cursor {
-        z-index: 1;
-        position: absolute;
-        top: 535px;
-        right: 100px;
-        width: 44px;
-        height: 47px;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox {
-        position: relative;
-        top: 106px;
-        left: 38px;
-        width: 1120px;
-        height: 480px;
-        overflow: hidden;
-        border-radius: 10px;
-        border: 0;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .vbox_slick {
-        position: absolute;
-        width: 670px;
-        height: 480px;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .vbox_slick div {
-        width: 670px;
-        height: 480px;
-    }
-
-    /* 1 */
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(1) .vbox .vbox_slick .s1 {
-        background: url("https://i.imgur.com/LBZNWl5.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(1) .vbox .vbox_slick .s2 {
-        background: url("https://i.imgur.com/GfgAwaE.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(1) .vbox .vbox_slick .s3 {
-        background: url("https://i.imgur.com/z8HCZYF.png") no-repeat top center/cover;
-    }
-
-    /* 2 */
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(2) .vbox .vbox_slick .s1 {
-        background: url("https://i.imgur.com/N5TfyY5.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(2) .vbox .vbox_slick .s2 {
-        background: url("https://i.imgur.com/kE1MPrU.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(2) .vbox .vbox_slick .s3 {
-        background: url("https://i.imgur.com/MWopCH3.png") no-repeat top center/cover;
-    }
-
-    /* 3 */
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(3) .vbox .vbox_slick .s1 {
-        background: url("https://i.imgur.com/5yhKWil.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(3) .vbox .vbox_slick .s2 {
-        background: url("https://i.imgur.com/1DvAtTD.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(3) .vbox .vbox_slick .s3 {
-        background: url("https://i.imgur.com/MngpZ1e.png") no-repeat top center/cover;
-    }
-
-    /* 4 */
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(4) .vbox .vbox_slick .s1 {
-        background: url("https://i.imgur.com/kkjrVQh.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(4) .vbox .vbox_slick .s2 {
-        background: url("https://i.imgur.com/cPtRwt1.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(4) .vbox .vbox_slick .s3 {
-        background: url("https://i.imgur.com/jJRTKB9.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .scr_slick {
-        position: absolute;
-        top: 0;
-        left: 715px;
-        width: 403px;
-        height: 266px;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .scr_slick div {
-        width: 403px;
-        height: 266px;
-        /* border-radius: 10px; */
-        overflow: hidden;
-    }
-
-    /* 1 */
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(1) .vbox .scr_slick .s1 {
-        background: url("https://i.imgur.com/lC6qJUu.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(1) .vbox .scr_slick .s2 {
-        background: url("https://i.imgur.com/or9yIIl.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(1) .vbox .scr_slick .s3 {
-        background: url("https://i.imgur.com/DzQuJw2.png") no-repeat top center/cover;
-    }
-
-    /* 2 */
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(2) .vbox .scr_slick .s1 {
-        background: url("https://i.imgur.com/FmmEo3i.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(2) .vbox .scr_slick .s2 {
-        background: url("https://i.imgur.com/jMZVqyq.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(2) .vbox .scr_slick .s3 {
-        background: url("https://i.imgur.com/5KTPuWl.png") no-repeat top center/cover;
-    }
-
-    /* 3 */
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(3) .vbox .scr_slick .s1 {
-        background: url("https://i.imgur.com/wjFy8c8.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(3) .vbox .scr_slick .s2 {
-        background: url("https://i.imgur.com/65EzngO.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(3) .vbox .scr_slick .s3 {
-        background: url("https://i.imgur.com/mDRL7qu.png") no-repeat top center/cover;
-    }
-
-    /* 4 */
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(4) .vbox .scr_slick .s1 {
-        background: url("https://i.imgur.com/WD0PsmW.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(4) .vbox .scr_slick .s2 {
-        background: url("https://i.imgur.com/WD0PsmW.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li:nth-child(4) .vbox .scr_slick .s3 {
-        background: url("https://i.imgur.com/WD0PsmW.png") no-repeat top center/cover;
-    }
-
-    /* arrow dots */
-    #eventContainer #sect04 .box ul.ppp>li .vbox .vbox_slick .slick-prev {
-        position: absolute;
-        top: 323px;
-        left: 717px;
-        width: 46px;
-        height: 46px;
-        font-size: 0;
-        background: url("https://i.imgur.com/J4FKC1N.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .vbox_slick .slick-next {
-        position: absolute;
-        top: 323px;
-        left: 1071px;
-        width: 46px;
-        height: 46px;
-        font-size: 0;
-        background: url("https://i.imgur.com/Fh1or2X.png") no-repeat top center/cover;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .vbox_slick ul.slick-dots {
-        position: absolute;
-        top: 341px;
-        left: 900px;
-        width: 59px;
-        height: 14px;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .vbox_slick ul.slick-dots li {
-        float: left;
-        width: 12.8px;
-        height: 12.8px;
-        border-radius: 50%;
-        background: #aaa;
-        margin-right: 10px;
-        cursor: pointer;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .vbox_slick ul.slick-dots li:last-child {
-        margin-right: 0;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .vbox_slick ul.slick-dots li.slick-active {
-        background: #fae4c0;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .vbox_slick ul.slick-dots li button {
-        font-size: 0;
-    }
-
-    /* submit */
-    #eventContainer #sect04 .box ul.ppp>li .vbox .submit {
-        position: absolute;
-        bottom: 20px;
-        right: 0px;
-        width: 401.01px;
-        height: 68.01px;
-        line-height: 68.01px;
-        background: #222;
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 600;
-        font-size: 28px;
-        letter-spacing: -0.01em;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .submit:hover {
-        background: #e4be9b;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .submit .sub_slick {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 401.01px;
-        height: 68.01px;
-    }
-
-    #eventContainer #sect04 .box ul.ppp>li .vbox .submit .sub_slick div {
-        width: 401.01px;
-        height: 68.01px;
-    }
-
 
     /* sect05 */
-    #eventContainer #sect05 {
+    #sect05 {
         position: relative;
         width: 100%;
-        height: 2856px;
-        background: url("https://i.imgur.com/ON6LyaU.png") no-repeat top center;
+        height: 2845px;
+        background: url("https://i.imgur.com/PDqs10F.png") no-repeat top center;
     }
 
-    #eventContainer #sect05 iframe {
+    #sect05 iframe {
         z-index: 1;
         position: absolute;
-        top: 460px;
+        top: 462px;
         left: 50%;
         transform: translateX(-50%);
         width: 958px;
@@ -842,11 +578,23 @@
         right:0;
         top:30px;
         width: 153px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
+        background-color: #ffbb00;
+        border-radius: 20px;
+         -webkit-animation: btnBlink2 500ms linear infinite;
+        animation: btnBlink2 500ms linear infinite;
     }
     #eventContainer .fix-nav .btn1 img {
-        width: 153px;
-        height: 44px;
+        width: 98px;
+        height: 22px;
+    }
+    #eventContainer .fix-nav .btn1:hover {
+        animation: none;
+        background-color: #ff852c;
     }
     #eventContainer .fix-nav ul {
         width: 1200px;
@@ -904,602 +652,101 @@
         top: 0;
         z-index: 50;
     }
-
-
-    #eventContainer #notice .btn:hover {
-        cursor: pointer
+    .quick-banner {
+        width: 231px;
+        height: 230px;
+        position: fixed;
+        bottom:50px;
+        left: 80%;
+        background: url(https://i.imgur.com/HerbHB9.png) no-repeat 0 0;
+        filter: drop-shadow(0 0 0.75rem rgba(0,0,0,.5));
+        z-index: 10;
     }
-
-    #eventContainer #notice .btn .open {
-        display: block
-    }
-
-    #eventContainer #notice .btn .close {
-        display: none
-    }
-
-    #eventContainer #notice .btn.active .open {
-        display: none
-    }
-
-    #eventContainer #notice .btn.active .close {
-        display: block
-    }
-
-    #eventContainer #notice .list .concon {
+    .quick-banner a {
         position: absolute;
-        top: 609px;
-        left: 1248px;
-        width: 140px;
-        height: 23px;
-        cursor: pointer;
-        background: url("https://i.imgur.com/xo0rl6Q.png") no-repeat top center;
-        background-size: 100% 100%;
+        right: 0;
+        top:20px;
     }
 
-    #eventContainer #notice .list .conwrap {
-        display: none;
-        position: relative;
-        width: 1200px;
-        margin: 0 auto;
-    }
+    
 
-    @media screen and (min-width: 1281px) and (max-width: 1950px) {
-        #eventContainer #notice .list .concon {
-            position: absolute;
-            top: 31.73vw;
-            left: 65.00vw;
-            /*            top: 31.45vw; left: 64.5vw;*/
-            width: 7.18vw;
-            height: 1.18vw;
-            cursor: pointer;
-            background: url("https://i.imgur.com/xo0rl6Q.png") no-repeat top center;
-            background-size: 100% 100%;
+    @-webkit-keyframes btnBlink {
+        0% {
+            background: #222;
+        }
+
+        49% {
+            background: #222;
+        }
+
+        50% {
+            background: #e27626;
+        }
+
+        100% {
+            background: #e27626;
         }
     }
 
-    @media screen and (max-width: 1280.9999px) {
-        #eventContainer #notice .list .concon {
-            position: absolute;
-            top: 406px;
-            left: 831px;
-            width: 100px;
-            height: 16.42px;
-            cursor: pointer;
-            background: url("https://i.imgur.com/xo0rl6Q.png") no-repeat top center;
-            background-size: 100% 100%;
+    @keyframes btnBlink {
+        0% {
+            background: #222;
+        }
+
+        49% {
+            background: #222;
+        }
+
+        50% {
+            background: #e27626;
+        }
+
+        100% {
+            background: #e27626;
         }
     }
 
-    /* ssect04 */
-    #sect04 .wrapper {
-        position: relative;
-        width: 1200px;
-        margin: 0 auto;
-    }
-
-    #sect04 .wrapper .brick {
-        width: 585px;
-        height: 730px;
-    }
-
-    #sect04 .wrapper #br1 {
-        position: absolute;
-        top: 558px;
-        left: 25%;
-        transform: translateX(-50%);
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20221101/IMG1667Cnf265433970.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br2 {
-        position: absolute;
-        top: 558px;
-        left: 75%;
-        transform: translateX(-50%);
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20221101/IMG1667kmJ265439791.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br3 {
-        position: absolute;
-        top: 558px;
-        right: 0;
-        background: url("https://i.imgur.com/ZXCCuTS.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br4 {
-        position: absolute;
-        top: 1512px;
-        left: 25%;
-        transform: translateX(-50%);
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20221101/IMG1667ZnU265446580.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br5 {
-        position: absolute;
-        top: 1512px;
-        left: 75%;
-        transform: translateX(-50%);
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20221101/IMG1667AxH265453603.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br6 {
-        position: absolute;
-        top: 1512px;
-        right: 0;
-        background: url("https://i.imgur.com/apFOpO6.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br7 {
-        position: absolute;
-        top: 2490px;
-        left: 25%;
-        transform: translateX(-50%);
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20221102/IMG1667hUB356975383.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br8 {
-        position: absolute;
-        top: 2490px;
-        left: 75%;
-        transform: translateX(-50%);
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20221102/IMG1667vNH357016865.png") no-repeat top center/cover;
-    }
-
-    /* .frame .brick_vslick */
-    #sect04 .wrapper .brick .frame {
-        position: absolute;
-        top: 245px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 494px;
-        height: 270px;
-        overflow: hidden;
-        border-radius: 10px;
-        /* 주석 */
-        /* background: #000;  */
-    }
-
-    #sect04 .wrapper .brick .frame .brick_vslick {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    #sect04 .wrapper .brick .frame .brick_vslick div {
-        width: 100%;
-        height: 100%;
-    }
-
-    /* .brick_sslick */
-    #sect04 .wrapper .brick .brick_sslick {
-        z-index: 11;
-        position: relative;
-        top: 0px;
-        width: 100%;
-        height: 730px;
-        cursor: pointer;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick .v1 {
-        position: relative;
-        width: 100%;
-        height: 730px;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick .v2 {
-        position: relative;
-        width: 100%;
-        height: 730px;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick .v3 {
-        position: relative;
-        width: 100%;
-        height: 730px;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick ul.slick-dots {
-        z-index: 13;
-        position: absolute;
-        top: 667px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 56px;
-        height: 14px;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick ul.slick-dots li {
-        float: left;
-        opacity: 0.5;
-        width: 12.8px;
-        height: 12px;
-        border-radius: 50%;
-        background: #aaa;
-        font-size: 0;
-        cursor: pointer;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick ul.slick-dots li button {
-        font-size: 0;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick ul.slick-dots li:nth-child(1) {
-        position: absolute;
-        top: 0px;
-        left: 0;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick ul.slick-dots li:nth-child(2) {
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    #sect04 .wrapper .brick .brick_sslick ul.slick-dots li:nth-child(3) {
-        position: absolute;
-        top: 0px;
-        right: 0;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick .slick-prev {
-        z-index: 99;
-        position: absolute;
-        top: 650px;
-        left: 43px;
-        width: 46px;
-        height: 46px;
-        cursor: pointer;
-        font-size: 0;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick .slick-prev button {
-        font-size: 0;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick .slick-prev:hover {
-        opacity: 0.8;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick .slick-next {
-        z-index: 99;
-        position: absolute;
-        top: 650px;
-        right: 43px;
-        width: 46px;
-        height: 46px;
-        cursor: pointer;
-        font-size: 0;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick .slick-next button {
-        font-size: 0;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick .slick-next:hover {
-        opacity: 0.8;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick div .sscr {
-        z-index: 11;
-        position: absolute;
-        top: 4px;
-        left: 0px;
-    }
-
-    /* 주석 */
-    #sect04 .wrapper .brick .brick_sslick div .sscr .word1 {
-        z-index: 1;
-        position: absolute;
-        top: 550px;
-        left: 0px;
-        width: 585px;
-        text-align: center;
-        color: #222;
-        font-size: 28px;
-        letter-spacing: -0.03em;
-        font-weight: 300;
-    }
-
-    #sect04 .wrapper .brick .brick_sslick div .sscr .word2 {
-        z-index: 1;
-        position: absolute;
-        top: 594px;
-        left: 0px;
-        width: 585px;
-        text-align: center;
-        color: #222;
-        font-size: 34px;
-        letter-spacing: -0.03em;
-        font-weight: 600;
-    }
-
-    /* #br1 */
-    #sect04 .wrapper #br1 .brick_sslick ul.slick-dots li.slick-active {
-        opacity: 1;
-        background: #efc0ae;
-    }
-
-    #sect04 .wrapper #br1 .brick_sslick .slick-prev {
-        background: url("https://i.imgur.com/IYDJzjo.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br1 .brick_sslick .slick-next {
-        background: url("https://i.imgur.com/Sfi9a3m.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br1 .frame .brick_vslick .v1 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220901/IMG1662LNu000307543.jpg") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br1 .frame .brick_vslick .v2 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220901/IMG1662gMi000323133.jpg") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br1 .frame .brick_vslick .v3 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220901/IMG1662aoa000333393.jpg") no-repeat center center/cover;
-    }
-
-    /*     #sect04 .wrapper #br1 .brick_sslick .v1 .sscr{
-        width: 243px; height: 72px;
-        background:url("https://i.imgur.com/vwwAVQK.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br1 .brick_sslick .v2 .sscr{
-        width: 221px; height: 72px;
-        background:url("https://i.imgur.com/i0NehVj.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br1 .brick_sslick .v3 .sscr{
-        width: 167px; height: 72px;
-        background:url("https://i.imgur.com/ezoYpB8.pngg") no-repeat top center/cover;
-    } */
-    /* #br2 */
-    #sect04 .wrapper #br2 .brick_sslick ul.slick-dots li.slick-active {
-        opacity: 1;
-        background: #e4be9b;
-    }
-
-    #sect04 .wrapper #br2 .brick_sslick .slick-prev {
-        background: url("https://i.imgur.com/1fREwnn.png") no-repeat top center/cover;
-    }
+    @-webkit-keyframes btnBlink2 {
+        0% {
+            background: #ffbb00;
+        }
 
-    #sect04 .wrapper #br2 .brick_sslick .slick-next {
-        background: url("https://i.imgur.com/7sN4dKJ.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br2 .frame .brick_vslick .v1 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220901/IMG1662PJY000347782.jpg") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br2 .frame .brick_vslick .v2 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220901/IMG1662sRU000361977.jpg") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br2 .frame .brick_vslick .v3 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220901/IMG1662vzU000371477.jpg") no-repeat center center/cover;
-    }
-
-    /*     #sect04 .wrapper #br2 .brick_sslick .v1 .sscr{
-        width: 221px; height: 72px;
-        background:url("https://i.imgur.com/h9xthaH.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br2 .brick_sslick .v2 .sscr{
-        width: 174px; height: 73px;
-        background:url("https://i.imgur.com/c9pQqlC.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br2 .brick_sslick .v3 .sscr{
-        width: 245px; height: 72px;
-        background:url("https://i.imgur.com/iukC1wi.png") no-repeat top center/cover;
-    } */
-    /* #br3 */
-    #sect04 .wrapper #br3 .brick_sslick ul.slick-dots li.slick-active {
-        opacity: 1;
-        background: #a3a19f;
-    }
-
-    #sect04 .wrapper #br3 .brick_sslick .slick-prev {
-        background: url("https://i.imgur.com/rYVYaH3.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br3 .brick_sslick .slick-next {
-        background: url("https://i.imgur.com/VG6f99F.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br3 .frame .brick_vslick .v1 {
-        background: url("https://i.imgur.com/u4rc9wY.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br3 .frame .brick_vslick .v2 {
-        background: url("https://i.imgur.com/T6PSGpo.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br3 .frame .brick_vslick .v3 {
-        background: url("https://i.imgur.com/Cz9M2QJ.png") no-repeat top center/cover;
-    }
-
-    /*     #sect04 .wrapper #br3 .brick_sslick .v1 .sscr{
-        width: 192px; height: 72px;
-        background:url("https://i.imgur.com/W5EmVL9.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br3 .brick_sslick .v2 .sscr{
-        width: 245px; height: 72px;
-        background:url("https://i.imgur.com/8V5XlM9.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br3 .brick_sslick .v3 .sscr{
-        width: 214px; height: 72px;
-        background:url("https://i.imgur.com/hzYjJIb.png") no-repeat top center/cover;
-    } */
-    /* #br4 */
-    #sect04 .wrapper #br4 .brick_sslick ul.slick-dots li.slick-active {
-        opacity: 1;
-        background: #efc0ae;
-    }
-
-    #sect04 .wrapper #br4 .brick_sslick .slick-prev {
-        background: url("https://i.imgur.com/IYDJzjo.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br4 .brick_sslick .slick-next {
-        background: url("https://i.imgur.com/Sfi9a3m.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br4 .frame .brick_vslick .v1 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220919/IMG1663sgq555796655.png") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br4 .frame .brick_vslick .v2 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220919/IMG1663Cie555806393.png") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br4 .frame .brick_vslick .v3 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220919/IMG1663qLq555814432.png") no-repeat center center/cover;
-    }
-
-    /*     #sect04 .wrapper #br4 .brick_sslick .v1 .sscr{
-        width: 242px; height: 72px;
-        background:url("https://i.imgur.com/qTEwHn0.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br4 .brick_sslick .v2 .sscr{
-        width: 214px; height: 72px;
-        background:url("https://i.imgur.com/J5B6gLM.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br4 .brick_sslick .v3 .sscr{
-        width: 245px; height: 72px;
-        background:url("https://i.imgur.com/4t09Vyu.png") no-repeat top center/cover;
-    } */
-    /* #br5 */
-    #sect04 .wrapper #br5 .brick_sslick ul.slick-dots li.slick-active {
-        opacity: 1;
-        background: #e4be9b;
-    }
-
-    #sect04 .wrapper #br5 .brick_sslick .slick-prev {
-        background: url("https://i.imgur.com/1fREwnn.png") no-repeat top center/cover;
-    }
+        49% {
+            background: #ffbb00;
+        }
 
-    #sect04 .wrapper #br5 .brick_sslick .slick-next {
-        background: url("https://i.imgur.com/7sN4dKJ.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br5 .frame .brick_vslick .v1 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220919/IMG1663qiS555827142.png") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br5 .frame .brick_vslick .v2 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220919/IMG1663qNZ555839956.png") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br5 .frame .brick_vslick .v3 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220919/IMG1663qDw555851309.png") no-repeat center center/cover;
-    }
-
-    /*     #sect04 .wrapper #br5 .brick_sslick .v1 .sscr{
-        width: 221px; height: 72px;
-        background:url("https://i.imgur.com/u2wq7x4.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br5 .brick_sslick .v2 .sscr{
-        width: 174px; height: 73px;
-        background:url("https://i.imgur.com/TSQLfay.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br5 .brick_sslick .v3 .sscr{
-        width: 245px; height: 72px;
-        background:url("https://i.imgur.com/OBePMrI.png") no-repeat top center/cover;
-    } */
-    /* #br6 */
-    #sect04 .wrapper #br6 .brick_sslick ul.slick-dots li.slick-active {
-        opacity: 1;
-        background: #a3a19f;
-    }
-
-    #sect04 .wrapper #br6 .brick_sslick .slick-prev {
-        background: url("https://i.imgur.com/rYVYaH3.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br6 .brick_sslick .slick-next {
-        background: url("https://i.imgur.com/VG6f99F.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br6 .frame .brick_vslick .v1 {
-        background: url("https://i.imgur.com/4WY7are.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br6 .frame .brick_vslick .v2 {
-        background: url("https://i.imgur.com/98rvLOP.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br6 .frame .brick_vslick .v3 {
-        background: url("https://i.imgur.com/TXVMqhY.png") no-repeat top center/cover;
-    }
-
-    /*     #sect04 .wrapper #br6 .brick_sslick .v1 .sscr{
-        width: 198px; height: 72px;
-        background:url("https://i.imgur.com/MpoO6cc.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br6 .brick_sslick .v2 .sscr{
-        width: 245px; height: 73px;
-        background:url("https://i.imgur.com/AmW1bcm.png") no-repeat top center/cover;
-    }
-    #sect04 .wrapper #br6 .brick_sslick .v3 .sscr{
-        width: 214px; height: 72px;
-        background:url("https://i.imgur.com/G3V7aG3.png") no-repeat top center/cover;
-    } */
-
-    #sect04 .wrapper #br7 .brick_sslick ul.slick-dots li.slick-active {
-        opacity: 1;
-        background: #efc0ae;
-    }
-
-    #sect04 .wrapper #br7 .brick_sslick .slick-prev {
-        background: url("https://i.imgur.com/IYDJzjo.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br7 .brick_sslick .slick-next {
-        background: url("https://i.imgur.com/Sfi9a3m.png") no-repeat top center/cover;
-    }
+        50% {
+            background: #ff852c;
+        }
 
-    #sect04 .wrapper #br7 .frame .brick_vslick .v1 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662fML538922546.png") no-repeat center center/cover;
+        100% {
+            background: #ff852c;
+        }
     }
 
-    #sect04 .wrapper #br7 .frame .brick_vslick .v2 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662prR538928564.png") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br7 .frame .brick_vslick .v3 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662etq538933546.png") no-repeat center center/cover;
-    }
-
-    /* #br8 */
-    #sect04 .wrapper #br8 .brick_sslick ul.slick-dots li.slick-active {
-        opacity: 1;
-        background: #e4be9b;
-    }
+    @keyframes btnBlink2 {
+        0% {
+            background: #ffbb00;
+        }
 
-    #sect04 .wrapper #br8 .brick_sslick .slick-prev {
-        background: url("https://i.imgur.com/1fREwnn.png") no-repeat top center/cover;
-    }
-
-    #sect04 .wrapper #br8 .brick_sslick .slick-next {
-        background: url("https://i.imgur.com/7sN4dKJ.png") no-repeat top center/cover;
-    }
+        49% {
+            background: #ffbb00;
+        }
 
-    #sect04 .wrapper #br8 .frame .brick_vslick .v1 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662jGe538940359.png") no-repeat center center/cover;
-    }
-
-    #sect04 .wrapper #br8 .frame .brick_vslick .v2 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662dbM538946362.png") no-repeat center center/cover;
-    }
+        50% {
+            background: #ff852c;
+        }
 
-    #sect04 .wrapper #br8 .frame .brick_vslick .v3 {
-        background: url("https://www.homecc.com/UPLOAD/UPLOAD_IMAGE/EDITOR/20220907/IMG1662EtZ538957168.png") no-repeat center center/cover;
+        100% {
+            background: #ff852c;
+        }
     }
+    /* ssect04 */    
 </style>
 <div id="eventContainer">
-    <section id="sect01">
-        <iframe src="https://www.youtube.com/embed/jp0rbhUx0zI"
-            title="홈씨씨 인테리어 | TVC+VIRAL 30s (투명한견적/조진웅 편)" frameborder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section>
+    <section id="sect01">        
+        <iframe src="https://www.youtube.com/embed/UYMxsmIMI98" title="홈씨씨 인테리어 | TVC 30s (인테리어상담/조진웅 편)" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="btn1" onclick="javascript:fnOpenConsultingForm();" onfocus="blur()"><img alt="btn1" src="https://i.imgur.com/87JjJhl.png" /></div>
     </section>
 
     <div class="fix-nav">
@@ -1508,26 +755,22 @@
             <li><a href="#sect04">패키지 소개</a></li>
             <li><a href="#sect05">Why 홈씨씨?</a></li>
             <li class="btn1" onclick="javascript:fnOpenConsultingForm();" onfocus="blur()">
-                <img alt="btn1" src="https://i.imgur.com/NHOrAYQ.png" />
+                <img alt="btn1" src="https://i.imgur.com/ChFJyJc.png" />
             </li>
         </ul>
     </div>
 
     <section id="sect02">
         <div class="stepWrap" id="stepSlick">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://i.imgur.com/MvZThGQ.png" alt=""></div>
-                <div class="swiper-slide"><img src="https://i.imgur.com/dQUfEee.png" alt=""></div>
-                <div class="swiper-slide"><img src="https://i.imgur.com/eIW8goF.png" alt=""></div>
-                <div class="swiper-slide"><img src="https://i.imgur.com/ZeKz0aE.png" alt=""></div>
-                <div class="swiper-slide"><img src="https://i.imgur.com/zud1eTK.png" alt=""></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class=""><img src="https://i.imgur.com/3hpxkXI.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/IKG94KA.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/6eTyNZJ.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/JC1WI6P.png" alt=""></div>
+            <div class=""><img src="https://i.imgur.com/vEjtYGA.png" alt=""></div>
         </div>
         <div class="bannerWrap" id="bannerSlick">
-            <div class=""><img src="https://i.imgur.com/n53KGkX.png" alt=""></div>
-            <div class=""><img src="https://i.imgur.com/2CvkLiR.png" alt=""></div>
+            <div class="banner1" onclick="window.open('https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003305771', '_blank')"></div>
+            <div class="banner2" onclick="window.open('https://www.homecc.co.kr/magazine/info', '_blank')"></div>
         </div>
 
         <div class="abrWrap" id="abSlick">
@@ -1543,579 +786,270 @@
             <div class=""><img src="https://i.imgur.com/Jxs1MLq.png" alt=""></div>
             <div class=""><img src="https://i.imgur.com/P7QqBX0.png" alt=""></div>
             <div class=""><img src="https://i.imgur.com/Q4MKjuT.png" alt=""></div>
-        </div>
+        </div>        
     </section>
 
     <section id="sect03"></section>
 
     <section id="sect04">
-        <!-- 주석 -->
-        <div class="wrapper">
-            <div class="brick" id="br1">
-                <div class="frame">
-                    <div class="brick_vslick">
-                        <div class="v1">&nbsp;</div>
-
-                        <div class="v2">&nbsp;</div>
-
-                        <div class="v3">&nbsp;</div>
+        <nav class="tab-list" id="tabList">
+            <a href="#a" class="active"><span>거실</span></a>
+            <a href="#a"><span>침실</span></a>
+            <a href="#a"><span>욕실</span></a>
+            <a href="#a" ><span>현관</span></a>
+            <a href="#a"><span>윈도우</span></a>
+            <a href="#a"><span>조명</span></a>
+        </nav>
+        <section class="tab-container">
+            <section class="tab-cont" id="cont0">
+                <div class="row">
+                    <p class="t1 sb">LIVING7</p>
+                    <p class="t2 sb">최고급 자재만을 사용한 프리미엄 거실</p>
+                    <div class="img-slide" id="imgSlideA-1">
+                        <p><img src="https://i.imgur.com/rbgDRnf.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/VtKw2fe.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/qzqr16n.png" alt=""></p>
                     </div>
-                    <!-- .brick_vslick -->
+                    <div class="txt-slide" id="txtSlideA-1">
+                        <div>
+                            <p class="s1">오래 머물고  싶은 공간</p>
+                            <p class="s2">리빙 오가닉7</p>
+                        </div>
+                        <div>
+                            <p class="s1">고급스럽고 감각적인</p>
+                            <p class="s2">리빙 소프트7</p>
+                        </div>
+                        <div>
+                            <p class="s1">우아하고 멋스러운 공간</p>
+                            <p class="s2">리빙 트렌디7</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- .frame -->
-
-                <div class="brick_sslick">
-                    <div class="v1"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000152&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">차분하고 따뜻한 분위기</div>
-
-                            <div class="word2">바스 오가닉7</div>
+                <div class="row">
+                    <p class="t1 sb">LIVING5</p>
+                    <p class="t2 sb">최신 트렌드를 반영한 머물고 싶은 거실</p>
+                    <div class="img-slide" id="imgSlideA-2">
+                        <p><img src="https://i.imgur.com/xTmLXyq.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/b7q4ugA.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/BFXR6de.png" alt=""></p>
+                    </div>
+                    <div class="txt-slide" id="txtSlideA-2">
+                        <div>
+                            <p class="s1">자연의 느낌을 담은</p>
+                            <p class="s2">리빙 오가닉5</p>
+                        </div>
+                        <div>
+                            <p class="s1">소프트하며 안정감 있는</p>
+                            <p class="s2">리빙 소프트5</p>
+                        </div>
+                        <div>
+                            <p class="s1">트렌디하며 감각적인</p>
+                            <p class="s2">리빙 트렌디5</p>
                         </div>
                     </div>
-                    <!-- .v1 -->
-
-                    <div class="v2"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332202000149&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">부드럽고 우아한 공간</div>
-
-                            <div class="word2">바스 소프트7</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v3"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000155&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">모던한 도시감성</div>
-
-                            <div class="word2">바스 트렌디7</div>
-                        </div>
-                    </div>
-                    <!-- .v3 -->
                 </div>
-                <!-- .brick_sslick -->
-            </div>
-            <!-- .brick -->
+            </section>
 
-            <div class="brick" id="br2">
-                <div class="frame">
-                    <div class="brick_vslick">
-                        <div class="v1">&nbsp;</div>
-
-                        <div class="v2">&nbsp;</div>
-
-                        <div class="v3">&nbsp;</div>
+            <section class="tab-cont" id="cont1">
+                <div class="row">
+                    <p class="t1 sb">BEDROOM7</p>
+                    <p class="t2 sb">최고급 자재만을 사용한 프리미엄 침실</p>
+                    <div class="img-slide" id="imgSlideB-1">
+                        <p><img src="https://i.imgur.com/VT8vxLi.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/3aCLBAB.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/3aCLBAB.png" alt=""></p>
                     </div>
-                    <!-- .brick_vslick -->
+                    <div class="txt-slide" id="txtSlideB-1">
+                        <div>
+                            <p class="s1">아늑하고 따뜻한 분위기</p>
+                            <p class="s2">침실 오가닉7</p>
+                        </div>
+                        <div>
+                            <p class="s1">고급스럽고 미니멀한</p>
+                            <p class="s2">침실 소프트7</p>
+                        </div>
+                        <div>
+                            <p class="s1">모던한 도시감성</p>
+                            <p class="s2">침실 트렌디7</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- .frame -->
-
-                <div class="brick_sslick">
-                    <div class="v1"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000151&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">온화한 미니멀리즘</div>
-
-                            <div class="word2">바스 오가닉5</div>
+                <div class="row">
+                    <p class="t1 sb">BEDROOM5</p>
+                    <p class="t2 sb">차분하고 세련된 아늑한 침실</p>
+                    <div class="img-slide" id="imgSlideB-2">
+                        <p><img src="https://i.imgur.com/fINRNLq.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/1t2h9WL.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/bWcAnVS.png" alt=""></p>
+                    </div>
+                    <div class="txt-slide" id="txtSlideB-2">
+                        <div>
+                            <p class="s1">자연의 느낌을 담은</p>
+                            <p class="s2">리빙 오가닉5</p>
+                        </div>
+                        <div>
+                            <p class="s1">절제되고 모던한</p>
+                            <p class="s2">침실 소프트5</p>
+                        </div>
+                        <div>
+                            <p class="s1">트렌디하며 감각적인</p>
+                            <p class="s2">침실 트렌디5</p>
                         </div>
                     </div>
-                    <!-- .v1 -->
-
-                    <div class="v2"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332202000148&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">부드럽고 감각적인 공간</div>
-
-                            <div class="word2">바스 소프트5</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v3"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000154&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">트렌디하며 감각적인</div>
-
-                            <div class="word2">바스 트렌디5</div>
-                        </div>
-                    </div>
-                    <!-- .v3 -->
                 </div>
-                <!-- .brick_sslick -->
-            </div>
-            <!-- .brick -->
+            </section>
 
-            <div class="brick" id="br3" style="display: none;">
-                <div class="frame">
-                    <div class="brick_vslick">
-                        <div class="v1">&nbsp;</div>
-
-                        <div class="v2">&nbsp;</div>
-
-                        <div class="v3">&nbsp;</div>
+            <section class="tab-cont" id="cont2">
+                <div class="row">
+                    <p class="t1 sb">BATH7</p>
+                    <p class="t2 sb">최고급 자재를 사용한 프리미엄 욕실</p>
+                    <div class="img-slide" id="imgSlideC-1">
+                        <p><img src="https://i.imgur.com/d3Gv7xp.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/4Ry7MUN.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/2q6FDOu.png" alt=""></p>
                     </div>
-                    <!-- .brick_vslick -->
+                    <div class="txt-slide" id="txtSlideC-1">
+                        <div>
+                            <p class="s1">차분하고 따뜻한 분위기</p>
+                            <p class="s2">바스 오가닉7</p>
+                        </div>
+                        <div>
+                            <p class="s1">부드럽고 우아한</p>
+                            <p class="s2">바스 소프트7</p>
+                        </div>
+                        <div>
+                            <p class="s1">모던한 도시감성</p>
+                            <p class="s2">바스 트렌디7</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- .frame -->
-
-                <div class="brick_sslick">
-                    <div class="v1"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000150&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">온화한 미니멀리즘</div>
-
-                            <div class="word2">바스 오가닉3</div>
+                <div class="row">
+                    <p class="t1 sb">BATH5</p>
+                    <p class="t2 sb">어느곳에나 잘 어울리는 모던한 욕실</p>
+                    <div class="img-slide" id="imgSlideC-2">
+                        <p><img src="https://i.imgur.com/CqW1oER.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/rfgoNDw.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/MfBs5pw.png" alt=""></p>
+                    </div>
+                    <div class="txt-slide" id="txtSlideC-2">
+                        <div>
+                            <p class="s1">온화한 미니멀리즘</p>
+                            <p class="s2">바스 오가닉5</p>
+                        </div>
+                        <div>
+                            <p class="s1">부드럽고 감각적인 공간</p>
+                            <p class="s2">바스 소프트5</p>
+                        </div>
+                        <div>
+                            <p class="s1">트렌디하며 감각적인</p>
+                            <p class="s2">바스 트렌디5</p>
                         </div>
                     </div>
-                    <!-- .v1 -->
-
-                    <div class="v2"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332202000147&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">부드럽고 감각적인 공간</div>
-
-                            <div class="word2">바스 소프트3</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v3"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000153&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">트렌디하며 감각적인</div>
-
-                            <div class="word2">바스 트렌디3</div>
-                        </div>
-                    </div>
-                    <!-- .v3 -->
                 </div>
-                <!-- .brick_sslick -->
-            </div>
-            <!-- .brick -->
+            </section>
 
-            <div class="brick" id="br4">
-                <div class="frame">
-                    <div class="brick_vslick">
-                        <div class="v1">&nbsp;</div>
-
-                        <div class="v2">&nbsp;</div>
-
-                        <div class="v3">&nbsp;</div>
+            <section class="tab-cont" id="cont3">
+                <div class="row-one">
+                    <div class="img-slide" id="imgSlideD-1">
+                        <p><img src="https://i.imgur.com/h8NFwQC.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/daaulaR.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/jy5FtVY.png" alt=""></p>
                     </div>
-                    <!-- .brick_vslick -->
+                    <div class="txt-slide" id="txtSlideD-1">
+                        <div>
+                            <p class="s1">ORGANIC STYLE</p>
+                            <p class="s2 sb">오가닉 스타일</p>
+                            <button class="btnConsulting" type="button" onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000011&i_sKindcd=P004')"><span>현관 무료 상담</span></button>
+                        </div>
+                        <div>
+                            <p class="s1">SOFT STYLE</p>
+                            <p class="s2 sb">소프트 스타일</p>
+                            <button class="btnConsulting" type="button" onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000010&i_sKindcd=P004')"><span>현관 무료 상담</span></button>
+                        </div>
+                        <div>
+                            <p class="s1">TRENDY STYLE</p>
+                            <p class="s2 sb">트렌디 스타일</p>
+                            <button class="btnConsulting" type="button" onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000001&i_sKindcd=P004')"><span>현관 무료 상담</span></button>
+                        </div>
+                    </div>
+                    <ul class="txt-list">
+                        <li>행잉형으로 <br>넉넉한 수납</li>
+                        <li>고급 엣지 <br>마감형태</li>
+                        <li>18mm <br>초슬림 중문</li>
+                    </ul>
+                </div>                
+            </section>
+
+            <section class="tab-cont" id="cont4">
+                <div class="row-one">
+                    <div class="img-slide" id="imgSlideD-2">
+                        <p><img src="https://i.imgur.com/1a2S8ef.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/kKV4b3E.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/CzlXyIF.png" alt=""></p>
+                    </div>
+                    <div class="txt-slide" id="txtSlideD-2">
+                        <div>
+                            <p class="s1">HOMECC WINDOW</p>
+                            <p class="s2 sb">홈씨씨 윈도우</p>
+                            <button class="btnConsulting" type="button" onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&i_sKindcd=P004')"><span>윈도우 무료 상담</span></button>
+                        </div>
+                        <div>
+                            <p class="s1">HOMECC WINDOW</p>
+                            <p class="s2 sb">홈씨씨 윈도우</p>
+                            <button class="btnConsulting" type="button" onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&i_sKindcd=P004')"><span>윈도우 무료 상담</span></button>
+                        </div>
+                        <div>
+                            <p class="s1">HOMECC WINDOW</p>
+                            <p class="s2 sb">홈씨씨 윈도우</p>
+                            <button class="btnConsulting" type="button" onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&i_sKindcd=P004')"><span>윈도우 무료 상담</span></button>
+                        </div>
+                    </div>
+                    <ul class="txt-list">
+                        <li>우수한 <br>설계 구조</li>
+                        <li>KCC글라스로 만든 <br>로이유리 적용</li>
+                        <li>신뢰할수있는 <br>국산 자재</li>
+                    </ul>
                 </div>
-                <!-- .frame -->
+            </section>
 
-                <div class="brick_sslick">
-                    <div class="v1"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000107&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">오래 머물고 싶은 공간</div>
-
-                            <div class="word2">리빙 오가닉7</div>
+            <section class="tab-cont" id="cont5">
+                <div class="row-one">
+                    <div class="img-slide" id="imgSlideD-3">
+                        <p><img src="https://i.imgur.com/UN9TmK6.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/ZVeUMvm.png" alt=""></p>
+                        <p><img src="https://i.imgur.com/9BPyKbA.png" alt=""></p>
+                    </div>
+                    <div class="txt-slide" id="txtSlideD-3">
+                        <div>
+                            <p class="s1">ORGANIC STYLE</p>
+                            <p class="s2 sb">오가닉 스타일</p>
+                            <button class="btnConsulting" type="button" onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000036&i_sKindcd=P004')"><span>조명 무료 상담</span></button>
+                        </div>
+                        <div>
+                            <p class="s1">SOFT STYLE</p>
+                            <p class="s2 sb">소프트 스타일</p>
+                            <button class="btnConsulting" type="button" onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000037&i_sKindcd=P004')"><span>조명 무료 상담</span></button>
+                        </div>
+                        <div>
+                            <p class="s1">TRENDY STYLE</p>
+                            <p class="s2 sb">트렌디 스타일</p>
+                            <button class="btnConsulting" type="button" onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000002&i_sKindcd=P004')"><span>조명 무료 상담</span></button>
                         </div>
                     </div>
-                    <!-- .v1 -->
-
-                    <div class="v2"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000005&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">고급스럽고 감각적인</div>
-
-                            <div class="word2">리빙 소프트7</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v3"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000110&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">우아하고 멋스러운 공간</div>
-
-                            <div class="word2">리빙 트렌디7</div>
-                        </div>
-                    </div>
-                    <!-- .v3 -->
+                    <ul class="txt-list">
+                        <li>미니멀하고 <br>모던한 디자인</li>
+                        <li>LED <br>조명</li>
+                        <li>원데이 <br>시공</li>
+                    </ul>
                 </div>
-                <!-- .brick_sslick -->
-            </div>
-            <!-- .brick -->
-
-            <div class="brick" id="br5">
-                <div class="frame">
-                    <div class="brick_vslick">
-                        <div class="v1">&nbsp;</div>
-
-                        <div class="v2">&nbsp;</div>
-
-                        <div class="v3">&nbsp;</div>
-                    </div>
-                    <!-- .brick_vslick -->
-                </div>
-                <!-- .frame -->
-
-                <div class="brick_sslick">
-                    <div class="v1"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000106&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">자연의 느낌을 담은</div>
-
-                            <div class="word2">리빙 오가닉5</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v2"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000004&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">소프트하며 안정감 있는</div>
-
-                            <div class="word2">리빙 소프트5</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v3"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000109&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">트렌디하며 감각적인</div>
-
-                            <div class="word2">리빙 트렌디5</div>
-                        </div>
-                    </div>
-                    <!-- .v3 -->
-                </div>
-                <!-- .brick_sslick -->
-            </div>
-            <!-- .brick -->
-
-            <div class="brick" id="br6" style="display: none;">
-                <div class="frame">
-                    <div class="brick_vslick">
-                        <div class="v1">&nbsp;</div>
-
-                        <div class="v2">&nbsp;</div>
-
-                        <div class="v3">&nbsp;</div>
-                    </div>
-                    <!-- .brick_vslick -->
-                </div>
-                <!-- .frame -->
-
-                <div class="brick_sslick">
-                    <div class="v1"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000105&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">자연의 느낌을 담은</div>
-
-                            <div class="word2">리빙 오가닉3</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v2"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000003&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">소프트하며 안정감 있는</div>
-
-                            <div class="word2">리빙 소프트3</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v3"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332207000108&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">트렌디하며 감각적인</div>
-
-                            <div class="word2">리빙 트렌디3</div>
-                        </div>
-                    </div>
-                    <!-- .v3 -->
-                </div>
-                <!-- .brick_sslick -->
-            </div>
-            <!-- .brick -->
-
-            <div class="brick" id="br7">
-                <div class="frame">
-                    <div class="brick_vslick">
-                        <div class="v1">&nbsp;</div>
-
-                        <div class="v2">&nbsp;</div>
-
-                        <div class="v3">&nbsp;</div>
-                    </div>
-                    <!-- .brick_vslick -->
-                </div>
-                <!-- .frame -->
-
-                <div class="brick_sslick">
-                    <div class="v1"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332209000001&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">아늑하고 따뜻한 분위기</div>
-
-                            <div class="word2">침실 오가닉7</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v2"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332209000003&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">고급스럽고 미니멀한</div>
-
-                            <div class="word2">침실 소프트7</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v3"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332209000005&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">유니크하고 시크한</div>
-
-                            <div class="word2">침실 트렌디7</div>
-                        </div>
-                    </div>
-                    <!-- .v3 -->
-                </div>
-                <!-- .brick_sslick -->
-            </div>
-            <!-- .brick -->
-
-            <div class="brick" id="br8">
-                <div class="frame">
-                    <div class="brick_vslick">
-                        <div class="v1">&nbsp;</div>
-
-                        <div class="v2">&nbsp;</div>
-
-                        <div class="v3">&nbsp;</div>
-                    </div>
-                    <!-- .brick_vslick -->
-                </div>
-                <!-- .frame -->
-
-                <div class="brick_sslick">
-                    <div class="v1"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332209000002&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">자연의 느낌을 담은</div>
-
-                            <div class="word2">침실 오가닉5</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v2"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332209000004&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">절제되고 모던한</div>
-
-                            <div class="word2">침실 소프트5</div>
-                        </div>
-                    </div>
-                    <!-- .v1 -->
-
-                    <div class="v3"
-                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332209000006&amp;i_sKindcd=P004')">
-                        <div class="sscr">
-                            <div class="word1">트렌디하며 감각적인</div>
-
-                            <div class="word2">침실 트렌디5</div>
-                        </div>
-                    </div>
-                    <!-- .v3 -->
-                </div>
-                <!-- .brick_sslick -->
-            </div>
-            <!-- .brick -->
-        </div>
-        <!-- .wrapper -->
-
-        <div class="box">
-            <ul class="tab">
-                <li class="active">
-                    <p>현관</p>
-                </li>
-                <li style="display: none;">
-                    <p>수납</p>
-                </li>
-                <li>
-                    <p>조명</p>
-                </li>
-                <li>
-                    <p>윈도우</p>
-                </li>
-            </ul>
-            <!-- ul.tab -->
-
-            <ul class="ppp">
-                <li class="active" id="p1"><img alt="cursor" class="cursor" src="https://i.imgur.com/3dlycZE.png" />
-                    <p class="tit">INTERIOR PACKAGE 1</p>
-
-                    <div class="vbox">
-                        <div class="vbox_slick">
-                            <div class="s1">&nbsp;</div>
-
-                            <div class="s2">&nbsp;</div>
-
-                            <div class="s3">&nbsp;</div>
-                        </div>
-
-                        <div class="scr_slick">
-                            <div class="s1">&nbsp;</div>
-
-                            <div class="s2">&nbsp;</div>
-
-                            <div class="s3">&nbsp;</div>
-                        </div>
-
-                        <div class="submit">현관 무료 상담
-                            <div class="sub_slick">
-                                <div class="s1"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000011&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-
-                                <div class="s2"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000010&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-
-                                <div class="s3"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000001&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-                            </div>
-                        </div>
-                        <!-- .submit -->
-                    </div>
-                    <!-- vbox -->
-                </li>
-                <li id="p2"><img alt="cursor" class="cursor" src="https://i.imgur.com/3dlycZE.png" />
-                    <p class="tit">INTERIOR PACKAGE 2</p>
-
-                    <div class="vbox">
-                        <div class="vbox_slick">
-                            <div class="s1">&nbsp;</div>
-
-                            <div class="s2">&nbsp;</div>
-
-                            <div class="s3">&nbsp;</div>
-                        </div>
-
-                        <div class="scr_slick">
-                            <div class="s1">&nbsp;</div>
-
-                            <div class="s2">&nbsp;</div>
-
-                            <div class="s3">&nbsp;</div>
-                        </div>
-
-                        <div class="submit">수납 무료 상담
-                            <div class="sub_slick">
-                                <div class="s1"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000007&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-
-                                <div class="s2"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000008&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-
-                                <div class="s3"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000009&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-                            </div>
-                        </div>
-                        <!-- .submit -->
-                    </div>
-                    <!-- vbox -->
-                </li>
-                <li id="p3"><img alt="cursor" class="cursor" src="https://i.imgur.com/3dlycZE.png" />
-                    <p class="tit">INTERIOR PACKAGE 2</p>
-
-                    <div class="vbox">
-                        <div class="vbox_slick">
-                            <div class="s1">&nbsp;</div>
-
-                            <div class="s2">&nbsp;</div>
-
-                            <div class="s3">&nbsp;</div>
-                        </div>
-
-                        <div class="scr_slick">
-                            <div class="s1">&nbsp;</div>
-
-                            <div class="s2">&nbsp;</div>
-
-                            <div class="s3">&nbsp;</div>
-                        </div>
-
-                        <div class="submit">조명 무료 상담
-                            <div class="sub_slick">
-                                <div class="s1"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000036&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-
-                                <div class="s2"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000037&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-
-                                <div class="s3"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000002&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-                            </div>
-                        </div>
-                        <!-- .submit -->
-                    </div>
-                    <!-- vbox -->
-                </li>
-                <li id="p4"><img alt="cursor" class="cursor" src="https://i.imgur.com/3dlycZE.png" />
-                    <p class="tit">INTERIOR PACKAGE 3</p>
-
-                    <div class="vbox">
-                        <div class="vbox_slick">
-                            <div class="s1">&nbsp;</div>
-
-                            <div class="s2">&nbsp;</div>
-
-                            <div class="s3">&nbsp;</div>
-                        </div>
-
-                        <div class="scr_slick">
-                            <div class="s1">&nbsp;</div>
-
-                            <div class="s2">&nbsp;</div>
-
-                            <div class="s3">&nbsp;</div>
-                        </div>
-
-                        <div class="submit">윈도우 무료 상담
-                            <div class="sub_slick">
-                                <div class="s1"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-
-                                <div class="s2"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-
-                                <div class="s3"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&amp;i_sKindcd=P004')">
-                                    &nbsp;</div>
-                            </div>
-                        </div>
-                        <!-- .submit -->
-                    </div>
-                    <!-- vbox -->
-                </li>
-            </ul>
-            <!-- .ppp -->
-        </div>
-
-        <div class="btn1" onclick="javascript:fnOpenConsultingForm();" onfocus="blur()"><img alt="btn1" src="https://i.imgur.com/87JjJhl.png" /></div>
+            </section>
+        </section>
+        
+        <ul class="boxWrap">
+            <li class="boxWrap__01"></li>
+            <li class="boxWrap__02"></li>
+            <li class="boxWrap__03"></li>
+        </ul>        
     </section>
 
     <section id="sect05">
@@ -2124,7 +1058,9 @@
         title="홈씨씨 인테리어 | 인포그래픽 95s"></iframe>
     </section>
 
-    <section id="bottom_notice">​<img alt="확인해주세요 내용" src="https://i.imgur.com/gMmUTgC.png" /></section>
+    <div class="quick-banner" id="quickBanner" onclick="javascript:fnOpenConsultingForm();" onfocus="blur()">
+        <a href="#a"><img src="https://i.imgur.com/ORa8Ahz.png" alt=""></a>
+    </div>
 </div>
 <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -2189,74 +1125,56 @@
                 fixNavLis[5].classList.add("active");
             }
         });
+        $("#quickBanner a").on('click',function(){
 
-        $(".main-slide").slick({
-            dots: true,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 2000
+            $("#quickBanner").hide();
+            return false;
+        });
+
+        $("#tabList a").on("click",function(){
+            let contNum = $(this).index(); 
+            
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".tab-container .tab-cont").css('opacity',0);
+            $(".tab-container .tab-cont").css('z-index',0);
+            // $(".tab-container .tab-cont").slick('slickPause');
+            $(".tab-container .tab-cont").eq(contNum).css('z-index','1');
+            $(".tab-container .tab-cont").eq(contNum).css('opacity','1');
+            // $(".tab-container .tab-cont").eq(contNum).slick('slickPlay');
         });
 
     });
 
-    $("#eventContainer #sect04 .box ul.tab>li").eq(0).click(function () {
-        $("#eventContainer #sect04 .box ul.tab>li").removeClass("active");
-        $("#eventContainer #sect04 .box ul.tab>li").eq(0).addClass("active");
-        $("#sect04 .box ul.ppp>li").removeClass("active");
-        $("#sect04 .box ul.ppp>li").eq(0).addClass("active");
-    });
-    $("#eventContainer #sect04 .box ul.tab>li").eq(1).click(function () {
-        $("#eventContainer #sect04 .box ul.tab>li").removeClass("active");
-        $("#eventContainer #sect04 .box ul.tab>li").eq(1).addClass("active");
-        $("#sect04 .box ul.ppp>li").removeClass("active");
-        $("#sect04 .box ul.ppp>li").eq(1).addClass("active");
-    });
-    $("#eventContainer #sect04 .box ul.tab>li").eq(2).click(function () {
-        $("#eventContainer #sect04 .box ul.tab>li").removeClass("active");
-        $("#eventContainer #sect04 .box ul.tab>li").eq(2).addClass("active");
-        $("#sect04 .box ul.ppp>li").removeClass("active");
-        $("#sect04 .box ul.ppp>li").eq(2).addClass("active");
-    });
-    $("#eventContainer #sect04 .box ul.tab>li").eq(3).click(function () {
-        $("#eventContainer #sect04 .box ul.tab>li").removeClass("active");
-        $("#eventContainer #sect04 .box ul.tab>li").eq(3).addClass("active");
-        $("#sect04 .box ul.ppp>li").removeClass("active");
-        $("#sect04 .box ul.ppp>li").eq(3).addClass("active");
-    });
-    $("#eventContainer #sect04 .box ul.tab>li").eq(4).click(function () {
-        $("#eventContainer #sect04 .box ul.tab>li").removeClass("active");
-        $("#eventContainer #sect04 .box ul.tab>li").eq(4).addClass("active");
-        $("#sect04 .box ul.ppp>li").removeClass("active");
-        $("#sect04 .box ul.ppp>li").eq(4).addClass("active");
-    });
-    $("#eventContainer #sect04 .box ul.tab>li").eq(5).click(function () {
-        $("#eventContainer #sect04 .box ul.tab>li").removeClass("active");
-        $("#eventContainer #sect04 .box ul.tab>li").eq(5).addClass("active");
-        $("#sect04 .box ul.ppp>li").removeClass("active");
-        $("#sect04 .box ul.ppp>li").eq(5).addClass("active");
-    });
-
-    var swiper = new Swiper("#stepSlick", {
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        autoHeight: true,
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        //     pauseOnMouseEnter: true,
-        // },
-        observer: true,	// 추가
-        observeParents: true,	// 추가
-        navigation: {
-            nextEl: "#stepSlick .swiper-button-next",
-            prevEl: "#stepSlick .swiper-button-prev",
-        },
-        on: {
-            slideChange: function () {
-                //이벤트 또는 조건문으로 이용하면 된다.
-            },
-        },
+    // var swiper = new Swiper("#stepSlick", {
+    //     loop: true,
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 30,
+    //     autoHeight: true,
+    //     // autoplay: {
+    //     //     delay: 2500,
+    //     //     disableOnInteraction: false,
+    //     //     pauseOnMouseEnter: true,
+    //     // },
+    //     observer: true,	// 추가
+    //     observeParents: true,	// 추가
+    //     navigation: {
+    //         nextEl: "#stepSlick .swiper-button-next",
+    //         prevEl: "#stepSlick .swiper-button-prev",
+    //     },
+    //     on: {
+    //         slideChange: function () {
+    //             //이벤트 또는 조건문으로 이용하면 된다.
+    //         },
+    //     },
+    // });
+    $('#stepSlick').slick({
+        infinite: true,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        // fade: true,
+        // cssEase: 'linear'
     });
 
     $('#bannerSlick').slick({
@@ -2284,314 +1202,166 @@
         arrows: true,
         slidesToShow: 3,
         centerMode: true,
-    });
-    
-    
-    /* 1 */
-    $('#sect04 .box ul.ppp>li#p1 .vbox .vbox_slick').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots: true,
-        arrows: true,
-        asNavFor: '#sect04 .box ul.ppp>li#p1 .vbox .scr_slick, #sect04 .box ul.ppp>li#p1 .vbox .submit .sub_slick',
-    });
-    $('#sect04 .box ul.ppp>li#p1 .vbox .scr_slick').slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        fade: true,
-    });
-    $('#sect04 .box ul.ppp>li#p1 .vbox .submit .sub_slick').slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
+        variableWidth: true
     });
 
-    /* 2 */
-    $('#sect04 .box ul.ppp>li#p2 .vbox .vbox_slick').slick({
+    $('#imgSlideA-1').slick({
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: "#txtSlideA-1",
         autoplay: true,
         autoplaySpeed: 2000,
-        dots: true,
-        arrows: true,
-        asNavFor: '#sect04 .box ul.ppp>li#p2 .vbox .scr_slick, #sect04 .box ul.ppp>li#p2 .vbox .submit .sub_slick'
-    });
-    $('#sect04 .box ul.ppp>li#p2 .vbox .scr_slick').slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        fade: true,
-    });
-    $('#sect04 .box ul.ppp>li#p2 .vbox .submit .sub_slick').slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
     });
 
-    /* 3 */
-    $('#sect04 .box ul.ppp>li#p3 .vbox .vbox_slick').slick({
+    $('#txtSlideA-1').slick({
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots: true,
-        arrows: true,
-        asNavFor: '#sect04 .box ul.ppp>li#p3 .vbox .scr_slick, #sect04 .box ul.ppp>li#p3 .vbox .submit .sub_slick'
-    });
-    $('#sect04 .box ul.ppp>li#p3 .vbox .scr_slick').slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
+        asNavFor: "#imgSlideA-1",
         fade: true,
-    });
-    $('#sect04 .box ul.ppp>li#p3 .vbox .submit .sub_slick').slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
+        cssEase: 'linear',
+        dots: true,
     });
 
-    /* 4 */
-    $('#sect04 .box ul.ppp>li#p4 .vbox .vbox_slick').slick({
+    $('#imgSlideA-2').slick({
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: "#txtSlideA-2",
         autoplay: true,
         autoplaySpeed: 2000,
-        dots: true,
-        arrows: true,
-        asNavFor: '#sect04 .box ul.ppp>li#p4 .vbox .scr_slick, #sect04 .box ul.ppp>li#p4 .vbox .submit .sub_slick'
-    });
-    $('#sect04 .box ul.ppp>li#p4 .vbox .scr_slick').slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        fade: true,
-    });
-    $('#sect04 .box ul.ppp>li#p4 .vbox .submit .sub_slick').slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
     });
 
-    /* brick start */
-
-    /* brick1 */
-    $("#br1 .frame .brick_vslick").slick({
+    $('#txtSlideA-2').slick({
         infinite: true,
-        draggable: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnFocus: false,
-        asNavFor: '#br1 .brick_sslick',
-    });
-    $("#br1 .brick_sslick").slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
+        asNavFor: "#imgSlideA-2",
         fade: true,
-        asNavFor: '#br1 .frame .brick_vslick',
-    });
-    /* brick2 */
-    $("#br2 .frame .brick_vslick").slick({
-        infinite: true,
-        draggable: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnFocus: false,
-        asNavFor: '#br2 .brick_sslick',
-    });
-    $("#br2 .brick_sslick").slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        cssEase: 'linear',
         dots: true,
-        arrows: true,
-        fade: true,
-        asNavFor: '#br2 .frame .brick_vslick',
-    });
-    /* brick3 */
-    $("#br3 .frame .brick_vslick").slick({
-        infinite: true,
-        draggable: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnFocus: false,
-        asNavFor: '#br3 .brick_sslick',
-    });
-    $("#br3 .brick_sslick").slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-        fade: true,
-        asNavFor: '#br3 .frame .brick_vslick',
-    });
-    /* brick4 */
-    $("#br4 .frame .brick_vslick").slick({
-        infinite: true,
-        draggable: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnFocus: false,
-        asNavFor: '#br4 .brick_sslick',
-    });
-    $("#br4 .brick_sslick").slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-        fade: true,
-        asNavFor: '#br4 .frame .brick_vslick',
-    });
-    /* brick5 */
-    $("#br5 .frame .brick_vslick").slick({
-        infinite: true,
-        draggable: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnFocus: false,
-        asNavFor: '#br5 .brick_sslick',
-    });
-    $("#br5 .brick_sslick").slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-        fade: true,
-        asNavFor: '#br5 .frame .brick_vslick',
-    });
-    /* brick6 */
-    $("#br6 .frame .brick_vslick").slick({
-        infinite: true,
-        draggable: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        pauseOnFocus: false,
-        asNavFor: '#br6 .brick_sslick',
-    });
-    $("#br6 .brick_sslick").slick({
-        infinite: true,
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-        fade: true,
-        asNavFor: '#br6 .frame .brick_vslick',
     });
 
-    /* brick7 */
-    $("#br7 .frame .brick_vslick").slick({
+    $('#imgSlideB-1').slick({
         infinite: true,
-        draggable: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
         arrows: false,
+        asNavFor: "#txtSlideB-1",
         autoplay: true,
         autoplaySpeed: 2000,
-        pauseOnFocus: false,
-        asNavFor: '#br7 .brick_sslick',
     });
-    $("#br7 .brick_sslick").slick({
+
+    $('#txtSlideB-1').slick({
         infinite: true,
-        draggable: false,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
+        asNavFor: "#imgSlideB-1",
         fade: true,
-        asNavFor: '#br7 .frame .brick_vslick',
+        cssEase: 'linear',
+        dots: true,
     });
-    /* brick8 */
-    $("#br8 .frame .brick_vslick").slick({
+
+    $('#imgSlideB-2').slick({
         infinite: true,
-        draggable: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
         arrows: false,
+        asNavFor: "#txtSlideB-2",
         autoplay: true,
         autoplaySpeed: 2000,
-        pauseOnFocus: false,
-        asNavFor: '#br8 .brick_sslick',
     });
-    $("#br8 .brick_sslick").slick({
+
+    $('#txtSlideB-2').slick({
         infinite: true,
-        draggable: false,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
+        asNavFor: "#imgSlideB-2",
         fade: true,
-        asNavFor: '#br8 .frame .brick_vslick',
+        cssEase: 'linear',
+        dots: true,
     });
-        /* brick end */
 
+    $('#imgSlideC-1').slick({
+        infinite: true,
+        slidesToShow: 1,
+        arrows: false,
+        asNavFor: "#txtSlideC-1",
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
 
+    $('#txtSlideC-1').slick({
+        infinite: true,
+        slidesToShow: 1,
+        asNavFor: "#imgSlideC-1",
+        fade: true,
+        cssEase: 'linear',
+        dots: true,
+    });
 
+    $('#imgSlideC-2').slick({
+        infinite: true,
+        slidesToShow: 1,
+        arrows: false,
+        asNavFor: "#txtSlideC-2",
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
+    $('#txtSlideC-2').slick({
+        infinite: true,
+        slidesToShow: 1,
+        asNavFor: "#imgSlideC-2",
+        fade: true,
+        cssEase: 'linear',
+        dots: true,
+    });
+
+    $('#imgSlideD-1').slick({
+        infinite: true,
+        slidesToShow: 1,
+        arrows: false,
+        asNavFor: "#txtSlideD-1",
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
+    $('#txtSlideD-1').slick({
+        infinite: true,
+        slidesToShow: 1,
+        asNavFor: "#imgSlideD-1",
+        fade: true,
+        cssEase: 'linear',
+        dots: true,
+    });
+    $('#imgSlideD-2').slick({
+        infinite: true,
+        slidesToShow: 1,
+        arrows: false,
+        asNavFor: "#txtSlideD-2",
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
+    $('#txtSlideD-2').slick({
+        infinite: true,
+        slidesToShow: 1,
+        asNavFor: "#imgSlideD-2",
+        fade: true,
+        cssEase: 'linear',
+        dots: true,
+    });
+    $('#imgSlideD-3').slick({
+        infinite: true,
+        slidesToShow: 1,
+        arrows: false,
+        asNavFor: "#txtSlideD-3",
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
+    $('#txtSlideD-3').slick({
+        infinite: true,
+        slidesToShow: 1,
+        asNavFor: "#imgSlideD-3",
+        fade: true,
+        cssEase: 'linear',
+        dots: true,
+    });
 </script>
