@@ -248,8 +248,8 @@
 
     /* 화살표 */
     #sect02 .topSlider .swiper-prev,
-    #sect02 .topSlider .swiper-next {display: inline-block;width: 35px;height: 35px;margin:0;background:url('https://i.imgur.com/egnlGZd.png') no-repeat 50% / 30%;text-indent: -999em;cursor: pointer;position: absolute;left: 70%;top: 25vw;z-index: 100;}
-    #sect02 .topSlider .swiper-prev {transform: rotateY(180deg);left: 20%;}
+    #sect02 .topSlider .swiper-next {display: inline-block;width: 8.66vw;height: 8.66vw;margin:0;background:url('https://i.imgur.com/ivCV85M.png') no-repeat 50% / 99%;text-indent: -999em;cursor: pointer;position: absolute;left: 76%;top: 40vw;z-index: 100;border-radius: 50%;}
+    #sect02 .topSlider .swiper-prev {transform: rotateY(180deg);left: 15%;}
     /* sect03 */
     #sect03 {position: relative;}
     #sect03 .tit {font-size: 7.33vw;text-align: center;font-weight: 700;line-height: 9.86vw;}
@@ -266,9 +266,9 @@
     #sect03 .cont1 .slick-active button {opacity: 1;}
     #sect03 .cont2 {background:url(https://i.imgur.com/R6XTTVj.png) no-repeat 50% 50% / cover;padding: 13.33vw 0 12vw;margin-top: 13.86vw;text-align: center;}
     #sect03 .cont2 .s1 {font-size: 1.8vw;color:#fff;opacity: .5;line-height: 3vw;margin: 5vw 0 0;}
-    #sect03 .cont2 .slick-arrow {position: absolute;width: 8.933vw;height: 8.933vw;cursor: pointer;font-size: 0;color:transparent;z-index: 1;top:28vw;}
-    #sect03 .cont2 .slick-prev {left: 10vw;background: url(https://i.imgur.com/KhVLKxO.png) no-repeat 0 0 / cover;}
-    #sect03 .cont2 .slick-next {right: 10vw;background: url(https://i.imgur.com/ydxbNZS.png) no-repeat 0 0 / cover;}
+    #sect03 .cont2 .slick-arrow {position: absolute;width: 8.933vw;height: 8.933vw;cursor: pointer;font-size: 0;color:transparent;z-index: 1;top:45vw;}
+    #sect03 .cont2 .slick-prev {left: 10vw;background: url(https://i.imgur.com/8n6GkRp.png) no-repeat 0 0 / cover;}
+    #sect03 .cont2 .slick-next {right: 10vw;background: url(https://i.imgur.com/R6qnyoX.png) no-repeat 0 0 / cover;}
     #sect03 .cont2 .slick-dots {display: flex;position: absolute;width: max-content;gap: 8px;left: 50%;transform: translateX(-50%);top: 62vw;}
     #sect03 .cont2 .slick-dots button {display: flex;justify-content: center;align-items: center;width: 2.66vw;height: 2.66vw;border-radius: 50%;background: #d3d4d6;font-family: roboto;color:#d3d4d6;font-size: 0;}
     #sect03 .cont2 .slick-active button {background-color: #ec525e;}
@@ -291,8 +291,8 @@
     #sect04 .tab-list a.active span::before{content:'';border-bottom:2.6vw solid #ffe18f;display:block;position:absolute;width:120%;left:50%;transform:translate(-50%,5px);z-index:-1}
     
     
-    #sect04 .tab-container{height:128vw;overflow:hidden;background-color:#fffaed;border-bottom-left-radius:8px;border-bottom-right-radius:8px}
-    #sect04 .tab-cont{height:128vw;opacity:1;position:absolute;left:0;top:0;z-index: 2;}
+    #sect04 .tab-container{height:128vw;overflow:hidden;background-color:#fffaed;border-bottom-left-radius:8px;border-bottom-right-radius:8px;}
+    #sect04 .tab-cont{height:128vw;opacity:1;position:absolute;left:0;top:0;z-index: 2;border-bottom-left-radius:8px;border-bottom-right-radius:8px;}
     #sect04 .tab-cont:not(:first-child) {opacity: 0;z-index: 1;}
 
     #sect04 .tab-cont .slick-arrow {position: absolute;width: 8.4vw;height: 8.4vw;cursor: pointer;font-size: 0;color:transparent;z-index: 1;}
@@ -307,7 +307,7 @@
     #sect04 .tab-cont .btnConsulting span::after {content: '';display: block;width: 0;height: 0;border: 1.5vw solid transparent;border-left-color:#fff;margin-left: 2vw;}
 
     #sect04 .tab-cont .row {padding:6.66vw 5.33vw 20.13vw;text-align: left;display: flex;gap: 6vw;position: relative;}
-    #sect04 .tab-cont .row + .row {background-color: #fff7e1;padding-bottom: 29.06vw;}
+    #sect04 .tab-cont .row + .row {background-color: #fff7e1;padding-bottom: 29.06vw;border-top-left-radius:8px;border-top-right-radius:8px;}
     #sect04 .tab-cont .row .img-slide {width: 38.93vw;height: 32.66vw;}
     #sect04 .tab-cont .row .img-slide + div {width: calc(100% - 44.96vw);}
     #sect04 .tab-cont .row .t1 {font-size: 5vw;font-weight: 700;color:#222;margin-bottom: 1.33vw;letter-spacing: -0.05em;}
@@ -423,15 +423,15 @@
         background: url(https://i.imgur.com/BTpiNq6.png) no-repeat 0 0 / cover;
         /* background: url(assets/img/quick.png) no-repeat 0 0 / cover; */
         filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
-        z-index: 10;
+        z-index: 100;
         animation: changeBg .7s infinite;
     }
 
     .quick-banner img {
         position: absolute;
-        right: 0px;
-        top:5px;
-        width: 20%;
+        right: 5px;
+        top:15px;
+        width: 15%;
     }
 
     @-webkit-keyframes btnBlink {
@@ -515,407 +515,408 @@
     }
     </style>
     <div id="eventContainer">
-    <section id="sect01">
-        <div class="youtube">
-            <iframe src="https://www.youtube.com/embed/UYMxsmIMI98"
-                title="홈씨씨 인테리어 | TVC 30s (인테리어상담/조진웅 편)" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </div>
-        <button class="btn1" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><img src="https://i.imgur.com/UsVmhWX.png" alt=""></button>
-    </section>
-
-    <div class="fix-nav">
-        <ul>
-            <li class="active"><a href="#sect02">패키지 혜택</a></li>
-            <li><a href="#sect04">패키지 소개</a></li>
-            <li><a href="#sect05">Why 홈씨씨?</a></li>
-        </ul>
-    </div>
-
-    <section id="sect02">
-        <div class="cont1">
-            <p class="t1 sb">업계 1위, <br><b>홈씨씨 인테리어</b>에게 맡기세요</p>
-            
-            <div class="topSlider">
-                <div class="inner">
-                    <ul class="swiper-wrapper slide_list">
-                        <li class="swiper-slide img1"></li>
-                        <li class="swiper-slide img2"></li>
-                        <li class="swiper-slide img3"></li>
-                        <li class="swiper-slide img4"></li>
-                        <li class="swiper-slide img5"></li>
-                    </ul>
-                </div>
-                <div class="swiper-prev">이전</div>
-                <div class="swiper-next">다음</div>
+        <section id="sect01">
+            <div class="youtube">
+                <iframe src="https://www.youtube.com/embed/UYMxsmIMI98"
+                    title="홈씨씨 인테리어 | TVC 30s (인테리어상담/조진웅 편)" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div>
-            <p class="t2">
-                최근 3개년 국내시장 판유리, 코팅유리, 자동차유리 시장점유율 1위 <br>
-                *전자공시시스템 - 케이씨씨글라스 분기보고서 제3기 (2022년) 3분기
-            </p>
-        </div>
-        <div class="cont2">
-            <div class="img-slide" id="bannerSlick">
-                <p onclick="window.open('https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003305771', '_blank')"><img src="https://i.imgur.com/fj1JyOc.png" alt=""></p>
-                <p onclick="window.open('https://www.homecc.co.kr/magazine/info', '_blank')"><img src="https://i.imgur.com/7zacvfB.png" alt=""></p>
-            </div>
-        </div>
-    </section>
-
-    <section id="sect03">
-        <div class="cont1">
-            <p class="tit t1 sb">시공 사례</p>
-            <p class="tit t2 sb">BEFORE&middot;AFTER</p>
-            <div class="img-slide" id="imgSlick-1">
-                <div><img src="https://i.imgur.com/jvPTw7k.png" alt=""></div>
-                <div><img src="https://i.imgur.com/TO3Vp7T.png" alt=""></div>
-                <div><img src="https://i.imgur.com/jr7dKCq.png" alt=""></div>
-                <div><img src="https://i.imgur.com/F2NAo6Z.png" alt=""></div>
-            </div>
-        </div>
-        <div class="cont2">
-            <p class="tit t3 sb">이웃집 시공 사례</p>
-            <div class="img-slide" id="imgSlick-2">
-                <div><img src="https://i.imgur.com/m0GUkhm.png" alt=""></div>
-                <div><img src="https://i.imgur.com/FyCCbBj.png" alt=""></div>
-                <div><img src="https://i.imgur.com/uP415a4.png" alt=""></div>
-                <div><img src="https://i.imgur.com/MMUnYim.png" alt=""></div>
-                <div><img src="https://i.imgur.com/7VPsGXK.png" alt=""></div>
-            </div>
-            <p class="s1">
-                사진에 태그 된 상품은 홈씨씨몰에서 추천하는 유사한 인테리어 상품입니다. <br>
-                홈씨씨몰에서 더 많은 인테리어 상품을 만나보세요.
-            </p>
-        </div>
-        
-    </section>
-
-    <section id="sect04">
-        <div class="cont1">
-            <p class="tit sb">토탈 인테리어 패키지</p>
-            <nav class="tab-list" id="tabList">
-                <a href="#a" class="active"><span>거실</span></a>
-                <a href="#a"><span>침실</span></a>
-                <a href="#a"><span>욕실</span></a>
-                <a href="#a"><span>현관</span></a>
-                <a href="#a"><span>윈도우</span></a>
-                <a href="#a"><span>조명</span></a>
-            </nav>
-            <section class="tab-container">
-                <section class="tab-cont" id="cont0">
-                    <div class="row">
-                        <div class="img-slide" id="imgSlideA-1">
-                            <p><img src="https://i.imgur.com/9e3tYDu.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/RnPr16W.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/Uu6pylP.png" alt=""></p>
-                        </div>
-                        <div>
-                            <p class="t1 sb">LIVING7</p>
-                            <p class="t2 sb">최고급 자재를 사용한 <br>프리미엄 거실</p>
-                            <div class="txt-slide" id="txtSlideA-1">
-                                <div>
-                                    <p class="s1">오래 머물고 싶은 공간</p>
-                                    <p class="s2">리빙 오가닉7</p>
-                                </div>
-                                <div>
-                                    <p class="s1">고급스럽고 감각적인</p>
-                                    <p class="s2">리빙 소프트7</p>
-                                </div>
-                                <div>
-                                    <p class="s1">우아하고 멋스러운 공간</p>
-                                    <p class="s2">리빙 트렌디7</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="row">
-                        <div class="img-slide" id="imgSlideA-2">
-                            <p><img src="https://i.imgur.com/SAAHQVr.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/fuhNdOP.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/TVQXWC6.png" alt=""></p>
-                        </div>
-                        <div>
-                            <p class="t1 sb">LIVING5</p>
-                            <p class="t2 sb">최신 트렌드를 반영한 <br>머물고 싶은 거실</p>
-                            <div class="txt-slide" id="txtSlideA-2">
-                                <div>
-                                    <p class="s1">자연의 느낌을 담은</p>
-                                    <p class="s2">리빙 오가닉5</p>
-                                </div>
-                                <div>
-                                    <p class="s1">소프트하며 안정감 있는</p>
-                                    <p class="s2">리빙 소프트5</p>
-                                </div>
-                                <div>
-                                    <p class="s1">트렌디하며 감각적인</p>
-                                    <p class="s2">리빙 트렌디5</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>거실 무료 상담</span></button>
-                </section>
-            
-                <section class="tab-cont" id="cont1">
-                    <div class="row">
-                        <div class="img-slide" id="imgSlideB-1">
-                            <p><img src="https://i.imgur.com/EvOCa7T.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/m9IGlee.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/qZYq4UD.png" alt=""></p>
-                        </div>
-                        <div>
-                            <p class="t1 sb">BEDROOM7</p>
-                            <p class="t2 sb">최고급 자재를 사용한<br>프리미엄 침실</p>
-                            <div class="txt-slide" id="txtSlideB-1">
-                                <div>
-                                    <p class="s1">아늑하고 따뜻한 분위기</p>
-                                    <p class="s2">침실 오가닉7</p>
-                                </div>
-                                <div>
-                                    <p class="s1">고급스럽고 미니멀한</p>
-                                    <p class="s2">침실 소프트7</p>
-                                </div>
-                                <div>
-                                    <p class="s1">모던한 도시감성</p>
-                                    <p class="s2">침실 트렌디7</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="img-slide" id="imgSlideB-2">
-                            <p><img src="https://i.imgur.com/2Atdf1s.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/TyHBI9G.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/ZLR4TnQ.png" alt=""></p>
-                        </div>
-                        <div>
-                            <p class="t1 sb">BEDROOM5</p>
-                            <p class="t2 sb">차분하고 세련된 <br>아늑한 침실</p>
-                            <div class="txt-slide" id="txtSlideB-2">
-                                <div>
-                                    <p class="s1">자연의 느낌을 담은</p>
-                                    <p class="s2">리빙 오가닉5</p>
-                                </div>
-                                <div>
-                                    <p class="s1">절제되고 모던한</p>
-                                    <p class="s2">침실 소프트5</p>
-                                </div>
-                                <div>
-                                    <p class="s1">트렌디하며 감각적인</p>
-                                    <p class="s2">침실 트렌디5</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>침실 무료 상담</span></button>
-                </section>
-            
-                <section class="tab-cont" id="cont2">
-                    <div class="row">
-                        <div class="img-slide" id="imgSlideC-1">
-                            <p><img src="https://i.imgur.com/7IbF2TM.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/pzrk2Fk.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/GKWUtZd.png" alt=""></p>
-                        </div>
-                        <div>
-                            <p class="t1 sb">BATH7</p>
-                            <p class="t2 sb">최고급 자재를 사용한<br>프리미엄 욕실</p>
-                            <div class="txt-slide" id="txtSlideC-1">
-                                <div>
-                                    <p class="s1">차분하고 따뜻한 분위기</p>
-                                    <p class="s2">바스 오가닉7</p>
-                                </div>
-                                <div>
-                                    <p class="s1">부드럽고 우아한</p>
-                                    <p class="s2">바스 소프트7</p>
-                                </div>
-                                <div>
-                                    <p class="s1">모던한 도시감성</p>
-                                    <p class="s2">바스 트렌디7</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="img-slide" id="imgSlideC-2">
-                            <p><img src="https://i.imgur.com/H8ItXSv.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/Rlrn7J7.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/r0HGKQl.png" alt=""></p>
-                        </div>
-                        <div>
-                            <p class="t1 sb">BATH5</p>
-                            <p class="t2 sb">어느곳에나 잘 어울리는 <br>모던한 욕실</p>
-                            <div class="txt-slide" id="txtSlideC-2">
-                                <div>
-                                    <p class="s1">온화한 미니멀리즘</p>
-                                    <p class="s2">바스 오가닉5</p>
-                                </div>
-                                <div>
-                                    <p class="s1">부드럽고 감각적인 공간</p>
-                                    <p class="s2">바스 소프트5</p>
-                                </div>
-                                <div>
-                                    <p class="s1">트렌디하며 감각적인</p>
-                                    <p class="s2">바스 트렌디5</p>
-                                </div>
-                            </div>
-                            </div>
-                    </div>
-                    <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>욕실 무료 상담</span></button>
-                </section>
-            
-                <section class="tab-cont" id="cont3">
-                    <div class="row-one">
-                        <div class="img-slide" id="imgSlideD-1">
-                            <p><img src="https://i.imgur.com/7vZgAjL.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/4RqgUuu.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/gF9UvRh.png" alt=""></p>
-                        </div>
-                        <div class="txt-slide" id="txtSlideD-1">
-                            <div>
-                                <p class="s1">ORGANIC STYLE</p>
-                                <p class="s2 sb">오가닉 스타일</p>
-                                <!-- <button class="btnConsulting" type="button"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000011&i_sKindcd=P004')"><span>현관
-                                        무료 상담</span></button> -->
-                            </div>
-                            <div>
-                                <p class="s1">SOFT STYLE</p>
-                                <p class="s2 sb">소프트 스타일</p>
-                                <!-- <button class="btnConsulting" type="button"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000010&i_sKindcd=P004')"><span>현관
-                                        무료 상담</span></button> -->
-                            </div>
-                            <div>
-                                <p class="s1">TRENDY STYLE</p>
-                                <p class="s2 sb">트렌디 스타일</p>
-                                <!-- <button class="btnConsulting" type="button"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000001&i_sKindcd=P004')"><span>현관
-                                        무료 상담</span></button> -->
-                            </div>
-                        </div>
-                        <ul class="txt-list">
-                            <li>행잉형으로 <br>넉넉한 수납</li>
-                            <li>고급 엣지 <br>마감형태</li>
-                            <li>18mm <br>초슬림 중문</li>
-                        </ul>                        
-                    </div>
-                    <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>현관 무료 상담</span></button>
-                </section>
-            
-                <section class="tab-cont" id="cont4">
-                    <div class="row-one">
-                        <div class="img-slide" id="imgSlideD-2">
-                            <p><img src="https://i.imgur.com/iQgOYoY.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/HueXpS5.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/IUaFBzC.png" alt=""></p>
-                        </div>
-                        <div class="txt-slide" id="txtSlideD-2">
-                            <div>
-                                <p class="s1">HOMECC WINDOW</p>
-                                <p class="s2 sb">홈씨씨 윈도우</p>
-                                <!-- <button class="btnConsulting" type="button"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&i_sKindcd=P004')"><span>윈도우
-                                        무료 상담</span></button> -->
-                            </div>
-                            <div>
-                                <p class="s1">HOMECC WINDOW</p>
-                                <p class="s2 sb">홈씨씨 윈도우</p>
-                                <!-- <button class="btnConsulting" type="button"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&i_sKindcd=P004')"><span>윈도우
-                                        무료 상담</span></button> -->
-                            </div>
-                            <div>
-                                <p class="s1">HOMECC WINDOW</p>
-                                <p class="s2 sb">홈씨씨 윈도우</p>
-                                <!-- <button class="btnConsulting" type="button"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&i_sKindcd=P004')"><span>윈도우
-                                        무료 상담</span></button> -->
-                            </div>
-                        </div>
-                        <ul class="txt-list">
-                            <li>우수한 <br>설계 구조</li>
-                            <li>KCC글라스로 만든 <br>로이유리 적용</li>
-                            <li>신뢰할수있는 <br>국산 자재</li>
-                        </ul>                        
-                    </div>
-                    <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>윈도우 무료 상담</span></button>
-                </section>
-            
-                <section class="tab-cont" id="cont5">
-                    <div class="row-one">
-                        <div class="img-slide" id="imgSlideD-3">
-                            <p><img src="https://i.imgur.com/koUU6JB.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/Foet1y6.png" alt=""></p>
-                            <p><img src="https://i.imgur.com/p04wTkB.png" alt=""></p>
-                        </div>
-                        <div class="txt-slide" id="txtSlideD-3">
-                            <div>
-                                <p class="s1">ORGANIC STYLE</p>
-                                <p class="s2 sb">오가닉 스타일</p>
-                                <!-- <button class="btnConsulting" type="button"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000036&i_sKindcd=P004')"><span>조명
-                                        무료 상담</span></button> -->
-                            </div>
-                            <div>
-                                <p class="s1">SOFT STYLE</p>
-                                <p class="s2 sb">소프트 스타일</p>
-                                <!-- <button class="btnConsulting" type="button"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000037&i_sKindcd=P004')"><span>조명
-                                        무료 상담</span></button> -->
-                            </div>
-                            <div>
-                                <p class="s1">TRENDY STYLE</p>
-                                <p class="s2 sb">트렌디 스타일</p>
-                                <!-- <button class="btnConsulting" type="button"
-                                    onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000002&i_sKindcd=P004')"><span>조명
-                                        무료 상담</span></button> -->
-                            </div>
-                        </div>
-                        <ul class="txt-list">
-                            <li>미니멀하고 <br>모던한 디자인</li>
-                            <li>LED <br>조명</li>
-                            <li>원데이 <br>시공</li>
-                        </ul>                        
-                    </div>
-                    <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>조명 무료 상담</span></button>
-                </section>
-            </section>
-        </div>
-        <div class="cont2">
-            <p class="t1 sb">홈씨씨 인테리어만의 특별한 혜택</p>
-            <p class="tit sb">직접 찾아오는 <br>인테리어 무료 방문 상담&실측,</p>
-            <p class="t2 sb">어떻게 받을 수 있나요?</p>
-            <div class="cont2Slider">
-                <div class="inner">
-                    <ul class="swiper-wrapper slide_list">
-                        <li class="swiper-slide img1"></li>
-                        <li class="swiper-slide img2"></li>
-                        <li class="swiper-slide img3"></li>
-                    </ul>
-                </div>
-                <div class="swiper-prev">이전</div>
-                <div class="swiper-next">다음</div>
-            </div>
-        </div>
-        <div class="cont3">
             <button class="btn1" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><img src="https://i.imgur.com/UsVmhWX.png" alt=""></button>
-        </div>
-    </section>
-    <!-- #sect04 -->
+        </section>
 
-    <section id="sect05">
-        <div class="youtube">
-            <iframe src="https://www.youtube.com/embed/W2B6EvEcym0"
-                title="홈씨씨 인테리어 | 인포그래픽 95s" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+        <div class="fix-nav">
+            <ul>
+                <li class="active"><a href="#sect02">패키지 혜택</a></li>
+                <li><a href="#sect04">패키지 소개</a></li>
+                <li><a href="#sect05">Why 홈씨씨?</a></li>
+            </ul>
         </div>
-        <button class="btn1" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><img src="https://i.imgur.com/Dt4ofFV.png" alt=""></button>
-    </section>
-    <a href="tel:18778204" class="quick-banner" id="quickBanner"><p><img src="https://i.imgur.com/ORa8Ahz.png" alt=""></p></a>
+
+        <section id="sect02">
+            <div class="cont1">
+                <p class="t1 sb">업계 1위, <br><b>홈씨씨 인테리어</b>에게 맡기세요</p>
+                
+                <div class="topSlider">
+                    <div class="inner">
+                        <ul class="swiper-wrapper slide_list">
+                            <li class="swiper-slide img1"></li>
+                            <li class="swiper-slide img2"></li>
+                            <li class="swiper-slide img3"></li>
+                            <li class="swiper-slide img4"></li>
+                            <li class="swiper-slide img5"></li>
+                        </ul>
+                    </div>
+                    <div class="swiper-prev">이전</div>
+                    <div class="swiper-next">다음</div>
+                </div>
+                <p class="t2">
+                    최근 3개년 국내시장 판유리, 코팅유리, 자동차유리 시장점유율 1위 <br>
+                    *전자공시시스템 - 케이씨씨글라스 분기보고서 제3기 (2022년) 3분기
+                </p>
+            </div>
+            <div class="cont2">
+                <div class="img-slide" id="bannerSlick">
+                    <p onclick="window.open('https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003305771', '_blank')"><img src="https://i.imgur.com/fj1JyOc.png" alt=""></p>
+                    <p onclick="window.open('https://www.homecc.co.kr/magazine/info', '_blank')"><img src="https://i.imgur.com/7zacvfB.png" alt=""></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sect03">
+            <div class="cont1">
+                <p class="tit t1 sb">시공 사례</p>
+                <p class="tit t2 sb">BEFORE&middot;AFTER</p>
+                <div class="img-slide" id="imgSlick-1">
+                    <div><img src="https://i.imgur.com/jvPTw7k.png" alt=""></div>
+                    <div><img src="https://i.imgur.com/TO3Vp7T.png" alt=""></div>
+                    <div><img src="https://i.imgur.com/jr7dKCq.png" alt=""></div>
+                    <div><img src="https://i.imgur.com/F2NAo6Z.png" alt=""></div>
+                </div>
+            </div>
+            <div class="cont2">
+                <p class="tit t3 sb">이웃집 시공 사례</p>
+                <div class="img-slide" id="imgSlick-2">
+                    <div><img src="https://i.imgur.com/m0GUkhm.png" alt=""></div>
+                    <div><img src="https://i.imgur.com/FyCCbBj.png" alt=""></div>
+                    <div><img src="https://i.imgur.com/uP415a4.png" alt=""></div>
+                    <div><img src="https://i.imgur.com/MMUnYim.png" alt=""></div>
+                    <div><img src="https://i.imgur.com/7VPsGXK.png" alt=""></div>
+                </div>
+                <p class="s1">
+                    사진에 태그 된 상품은 홈씨씨몰에서 추천하는 유사한 인테리어 상품입니다. <br>
+                    홈씨씨몰에서 더 많은 인테리어 상품을 만나보세요.
+                </p>
+            </div>
+            
+        </section>
+
+        <section id="sect04">
+            <div class="cont1">
+                <p class="tit sb">토털 인테리어 패키지</p>
+                <nav class="tab-list" id="tabList">
+                    <a href="#a" class="active"><span>거실</span></a>
+                    <a href="#a"><span>침실</span></a>
+                    <a href="#a"><span>욕실</span></a>
+                    <a href="#a"><span>현관</span></a>
+                    <a href="#a"><span>윈도우</span></a>
+                    <a href="#a"><span>조명</span></a>
+                </nav>
+                <section class="tab-container">
+                    <section class="tab-cont" id="cont0">
+                        <div class="row">
+                            <div class="img-slide" id="imgSlideA-1">
+                                <p><img src="https://i.imgur.com/9e3tYDu.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/RnPr16W.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/Uu6pylP.png" alt=""></p>
+                            </div>
+                            <div>
+                                <p class="t1 sb">LIVING7</p>
+                                <p class="t2 sb">최고급 자재를 사용한 <br>프리미엄 거실</p>
+                                <div class="txt-slide" id="txtSlideA-1">
+                                    <div>
+                                        <p class="s1">오래 머물고 싶은 공간</p>
+                                        <p class="s2">리빙 오가닉7</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">고급스럽고 감각적인</p>
+                                        <p class="s2">리빙 소프트7</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">우아하고 멋스러운 공간</p>
+                                        <p class="s2">리빙 트렌디7</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="img-slide" id="imgSlideA-2">
+                                <p><img src="https://i.imgur.com/SAAHQVr.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/fuhNdOP.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/TVQXWC6.png" alt=""></p>
+                            </div>
+                            <div>
+                                <p class="t1 sb">LIVING5</p>
+                                <p class="t2 sb">최신 트렌드를 반영한 <br>머물고 싶은 거실</p>
+                                <div class="txt-slide" id="txtSlideA-2">
+                                    <div>
+                                        <p class="s1">자연의 느낌을 담은</p>
+                                        <p class="s2">리빙 오가닉5</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">소프트하며 안정감 있는</p>
+                                        <p class="s2">리빙 소프트5</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">트렌디하며 감각적인</p>
+                                        <p class="s2">리빙 트렌디5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>거실 무료 상담</span></button>
+                    </section>
+                
+                    <section class="tab-cont" id="cont1">
+                        <div class="row">
+                            <div class="img-slide" id="imgSlideB-1">
+                                <p><img src="https://i.imgur.com/EvOCa7T.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/m9IGlee.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/qZYq4UD.png" alt=""></p>
+                            </div>
+                            <div>
+                                <p class="t1 sb">BEDROOM7</p>
+                                <p class="t2 sb">최고급 자재를 사용한<br>프리미엄 침실</p>
+                                <div class="txt-slide" id="txtSlideB-1">
+                                    <div>
+                                        <p class="s1">아늑하고 따뜻한 분위기</p>
+                                        <p class="s2">침실 오가닉7</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">고급스럽고 미니멀한</p>
+                                        <p class="s2">침실 소프트7</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">모던한 도시감성</p>
+                                        <p class="s2">침실 트렌디7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="img-slide" id="imgSlideB-2">
+                                <p><img src="https://i.imgur.com/2Atdf1s.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/TyHBI9G.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/ZLR4TnQ.png" alt=""></p>
+                            </div>
+                            <div>
+                                <p class="t1 sb">BEDROOM5</p>
+                                <p class="t2 sb">차분하고 세련된 <br>아늑한 침실</p>
+                                <div class="txt-slide" id="txtSlideB-2">
+                                    <div>
+                                        <p class="s1">자연의 느낌을 담은</p>
+                                        <p class="s2">리빙 오가닉5</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">절제되고 모던한</p>
+                                        <p class="s2">침실 소프트5</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">트렌디하며 감각적인</p>
+                                        <p class="s2">침실 트렌디5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>침실 무료 상담</span></button>
+                    </section>
+                
+                    <section class="tab-cont" id="cont2">
+                        <div class="row">
+                            <div class="img-slide" id="imgSlideC-1">
+                                <p><img src="https://i.imgur.com/7IbF2TM.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/pzrk2Fk.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/GKWUtZd.png" alt=""></p>
+                            </div>
+                            <div>
+                                <p class="t1 sb">BATH7</p>
+                                <p class="t2 sb">최고급 자재를 사용한<br>프리미엄 욕실</p>
+                                <div class="txt-slide" id="txtSlideC-1">
+                                    <div>
+                                        <p class="s1">차분하고 따뜻한 분위기</p>
+                                        <p class="s2">바스 오가닉7</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">부드럽고 우아한</p>
+                                        <p class="s2">바스 소프트7</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">모던한 도시감성</p>
+                                        <p class="s2">바스 트렌디7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="img-slide" id="imgSlideC-2">
+                                <p><img src="https://i.imgur.com/H8ItXSv.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/Rlrn7J7.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/r0HGKQl.png" alt=""></p>
+                            </div>
+                            <div>
+                                <p class="t1 sb">BATH5</p>
+                                <p class="t2 sb">어느곳에나 잘 어울리는 <br>모던한 욕실</p>
+                                <div class="txt-slide" id="txtSlideC-2">
+                                    <div>
+                                        <p class="s1">온화한 미니멀리즘</p>
+                                        <p class="s2">바스 오가닉5</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">부드럽고 감각적인 공간</p>
+                                        <p class="s2">바스 소프트5</p>
+                                    </div>
+                                    <div>
+                                        <p class="s1">트렌디하며 감각적인</p>
+                                        <p class="s2">바스 트렌디5</p>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>욕실 무료 상담</span></button>
+                    </section>
+                
+                    <section class="tab-cont" id="cont3">
+                        <div class="row-one">
+                            <div class="img-slide" id="imgSlideD-1">
+                                <p><img src="https://i.imgur.com/7vZgAjL.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/4RqgUuu.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/gF9UvRh.png" alt=""></p>
+                            </div>
+                            <div class="txt-slide" id="txtSlideD-1">
+                                <div>
+                                    <p class="s1">ORGANIC STYLE</p>
+                                    <p class="s2 sb">오가닉 스타일</p>
+                                    <!-- <button class="btnConsulting" type="button"
+                                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000011&i_sKindcd=P004')"><span>현관
+                                            무료 상담</span></button> -->
+                                </div>
+                                <div>
+                                    <p class="s1">SOFT STYLE</p>
+                                    <p class="s2 sb">소프트 스타일</p>
+                                    <!-- <button class="btnConsulting" type="button"
+                                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000010&i_sKindcd=P004')"><span>현관
+                                            무료 상담</span></button> -->
+                                </div>
+                                <div>
+                                    <p class="s1">TRENDY STYLE</p>
+                                    <p class="s2 sb">트렌디 스타일</p>
+                                    <!-- <button class="btnConsulting" type="button"
+                                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000001&i_sKindcd=P004')"><span>현관
+                                            무료 상담</span></button> -->
+                                </div>
+                            </div>
+                            <ul class="txt-list">
+                                <li>행잉형으로 <br>넉넉한 수납</li>
+                                <li>고급 엣지 <br>마감형태</li>
+                                <li>18mm <br>초슬림 중문</li>
+                            </ul>                        
+                        </div>
+                        <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>현관 무료 상담</span></button>
+                    </section>
+                
+                    <section class="tab-cont" id="cont4">
+                        <div class="row-one">
+                            <div class="img-slide" id="imgSlideD-2">
+                                <p><img src="https://i.imgur.com/iQgOYoY.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/HueXpS5.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/IUaFBzC.png" alt=""></p>
+                            </div>
+                            <div class="txt-slide" id="txtSlideD-2">
+                                <div>
+                                    <p class="s1">HOMECC WINDOW</p>
+                                    <p class="s2 sb">홈씨씨 윈도우</p>
+                                    <!-- <button class="btnConsulting" type="button"
+                                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&i_sKindcd=P004')"><span>윈도우
+                                            무료 상담</span></button> -->
+                                </div>
+                                <div>
+                                    <p class="s1">HOMECC WINDOW</p>
+                                    <p class="s2 sb">홈씨씨 윈도우</p>
+                                    <!-- <button class="btnConsulting" type="button"
+                                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&i_sKindcd=P004')"><span>윈도우
+                                            무료 상담</span></button> -->
+                                </div>
+                                <div>
+                                    <p class="s1">HOMECC WINDOW</p>
+                                    <p class="s2 sb">홈씨씨 윈도우</p>
+                                    <!-- <button class="btnConsulting" type="button"
+                                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332208000008&i_sKindcd=P004')"><span>윈도우
+                                            무료 상담</span></button> -->
+                                </div>
+                            </div>
+                            <ul class="txt-list">
+                                <li>우수한 <br>설계 구조</li>
+                                <li>KCC글라스로 만든 <br>로이유리 적용</li>
+                                <li>신뢰할수있는 <br>국산 자재</li>
+                            </ul>                        
+                        </div>
+                        <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>윈도우 무료 상담</span></button>
+                    </section>
+                
+                    <section class="tab-cont" id="cont5">
+                        <div class="row-one">
+                            <div class="img-slide" id="imgSlideD-3">
+                                <p><img src="https://i.imgur.com/koUU6JB.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/Foet1y6.png" alt=""></p>
+                                <p><img src="https://i.imgur.com/p04wTkB.png" alt=""></p>
+                            </div>
+                            <div class="txt-slide" id="txtSlideD-3">
+                                <div>
+                                    <p class="s1">ORGANIC STYLE</p>
+                                    <p class="s2 sb">오가닉 스타일</p>
+                                    <!-- <button class="btnConsulting" type="button"
+                                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000036&i_sKindcd=P004')"><span>조명
+                                            무료 상담</span></button> -->
+                                </div>
+                                <div>
+                                    <p class="s1">SOFT STYLE</p>
+                                    <p class="s2 sb">소프트 스타일</p>
+                                    <!-- <button class="btnConsulting" type="button"
+                                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000037&i_sKindcd=P004')"><span>조명
+                                            무료 상담</span></button> -->
+                                </div>
+                                <div>
+                                    <p class="s1">TRENDY STYLE</p>
+                                    <p class="s2 sb">트렌디 스타일</p>
+                                    <!-- <button class="btnConsulting" type="button"
+                                        onclick="window.open('https://www.homecc.com/shop/prod/shop_prod_product_consulting_view.do?i_sProductcd=332203000002&i_sKindcd=P004')"><span>조명
+                                            무료 상담</span></button> -->
+                                </div>
+                            </div>
+                            <ul class="txt-list">
+                                <li>미니멀하고 <br>모던한 디자인</li>
+                                <li>LED <br>조명</li>
+                                <li>원데이 <br>시공</li>
+                            </ul>                        
+                        </div>
+                        <button class="btnConsulting" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><span>조명 무료 상담</span></button>
+                    </section>
+                </section>
+            </div>
+            <div class="cont2">
+                <p class="t1 sb">홈씨씨 인테리어만의 특별한 혜택</p>
+                <p class="tit sb">직접 찾아오는 <br>인테리어 무료 방문 상담&실측,</p>
+                <p class="t2 sb">어떻게 받을 수 있나요?</p>
+                <div class="cont2Slider">
+                    <div class="inner">
+                        <ul class="swiper-wrapper slide_list">
+                            <li class="swiper-slide img1"></li>
+                            <li class="swiper-slide img2"></li>
+                            <li class="swiper-slide img3"></li>
+                        </ul>
+                    </div>
+                    <div class="swiper-prev">이전</div>
+                    <div class="swiper-next">다음</div>
+                </div>
+            </div>
+            <div class="cont3">
+                <button class="btn1" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><img src="https://i.imgur.com/UsVmhWX.png" alt=""></button>
+            </div>
+        </section>
+        <!-- #sect04 -->
+
+        <section id="sect05">
+            <div class="youtube">
+                <iframe src="https://www.youtube.com/embed/W2B6EvEcym0"
+                    title="홈씨씨 인테리어 | 인포그래픽 95s" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <button class="btn1" type="button" onclick="location.href='/shop/prod/shop_prod_product_consulting_form.do'"><img src="https://i.imgur.com/Dt4ofFV.png" alt=""></button>
+        </section>
+        <a href="tel:18778204" class="quick-banner" id="quickBanner"><p><img src="https://i.imgur.com/ORa8Ahz.png" alt=""></p></a>
+    </div>
     <script type="text/javascript">
         "use strict";
 
@@ -1057,6 +1058,7 @@
             $(".tab-container .tab-cont").css('z-index',0);
             $(".tab-container .tab-cont").eq(contNum).css('z-index','1');
             $(".tab-container .tab-cont").eq(contNum).css('opacity','1');
+            return false;
         });
         $('#imgSlideA-1').slick({
             infinite: true,
